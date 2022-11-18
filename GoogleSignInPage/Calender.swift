@@ -10,21 +10,19 @@ import SwiftUI
 struct Calender: View {
     var body: some View {
         NavigationView {
-            ZStack {
-                Image("MyNCHSBackground")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .edgesIgnoringSafeArea(.all)
-                    .offset(x: -21.44)
-                
-                ScrollView {
-                    VStack {
-                        
+            Image("MyNCHSBackground")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .edgesIgnoringSafeArea(.all)
+                .offset(x: -21.44)
+            
+            ScrollView {
+                VStack {
                     
-                    }
-                    .navigationBarHidden(true)
-                    .padding()
+                
                 }
+                .navigationBarHidden(true)
+                .padding()
             }
         }
         .navigationViewStyle(.stack)

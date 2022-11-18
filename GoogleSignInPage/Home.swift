@@ -76,184 +76,85 @@ struct Home: View {
                             }
                         }
                         
-                        ZStack {
-                            Link(destination: URL(string: "https://apple.com")!) {
-                                Image("NorthCreek8")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 340, height: 150)
-                                    .brightness(-0.3)
-                                    .blur(radius: 3)
-                                    .cornerRadius(10)
-                            }
+                        VStack {
+                            LinkButton(url: URL(string: "https://grades.nsd.org")!,
+                                       imageName: "NorthCreek8",
+                                       brightness: -0.3,
+                                       blur: 3,
+                                       text1: "Student Info",
+                                       xOffset1: -80,
+                                       yOffset1: -30,
+                                       text2: "An easy way to check your student(s) grades, etc.",
+                                       xOffset2: -15,
+                                       yOffset2: -25)
                             
-                            VStack {
-                                Text("Student Info")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .kerning(1.1)
-                                    .offset(x: -80, y: -30)
-                                
-                                Text("An easy way to check your student(s) grades, etc.")
-                                    .foregroundColor(.white)
-                                    .offset(x: -15, y: -25)
-                            }
+                            LinkButton(url: URL(string: "https://wa-northshore.intouchreceipting.com")!,
+                                       imageName: "NorthCreek4",
+                                       brightness: -0.25,
+                                       blur: 2,
+                                       text1: "Payments",
+                                       xOffset1: -95,
+                                       yOffset1: -40,
+                                       text2: "You will be redirected to Touchbase.",
+                                       xOffset2: -23,
+                                       yOffset2: -37)
+                            
+                            LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/calendar")!,
+                                       imageName: "NorthCreek7",
+                                       brightness: -0.25,
+                                       blur: 2,
+                                       text1: "Upcoming Events",
+                                       xOffset1: -42,
+                                       yOffset1: -37,
+                                       text2: "Go to your calender!",
+                                       xOffset2: -82,
+                                       yOffset2: -32)
+                            
+                            LinkButton(url: URL(string: "https://northcreek.nsd.org/")!,
+                                       imageName: "NorthCreek5",
+                                       brightness: -0.2,
+                                       blur: 2,
+                                       text1: "Important Links",
+                                       xOffset1: -54,
+                                       yOffset1: -34,
+                                       text2: "Links that you should know.",
+                                       xOffset2: -53,
+                                       yOffset2: -29)
                         }
                         
-                        ZStack {
-                            Link(destination: URL(string: "https://apple.com")!) {
-                                Image("NorthCreek4")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 340, height: 150)
-                                    .brightness(-0.25)
-                                    .blur(radius: 2)
-                                    .cornerRadius(10)
-                            }
+                        VStack {
+                            LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/school-directory")!,
+                                       imageName: "NorthCreek2",
+                                       brightness: -0.2,
+                                       blur: 2,
+                                       text1: "Teacher Info",
+                                       xOffset1: -75,
+                                       yOffset1: -25,
+                                       text2: "A way to connect easily with your student’s teachers.",
+                                       xOffset2: -27,
+                                       yOffset2: -20)
                             
-                            VStack {
-                                Text("Payments")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .kerning(1.1)
-                                    .offset(x: -95, y: -40)
-                                
-                                Text("You will be redirected to Touchbase.")
-                                    .foregroundColor(.white)
-                                    .offset(x: -23, y: -37)
-                            }
-                        }
-                        
-                        ZStack {
-                            NavigationLink(destination: Calender()) {
-                                Image("NorthCreek7")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 340, height: 150)
-                                    .brightness(-0.2)
-                                    .blur(radius: 2)
-                                    .cornerRadius(10)
-                            }
+                            LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/parking-transportation")!,
+                                       imageName: "NorthCreek6",
+                                       brightness: -0.2,
+                                       blur: 2,
+                                       text1: "School Map",
+                                       xOffset1: -79,
+                                       yOffset1: -36,
+                                       text2: "For if you ever get lost in our school.",
+                                       xOffset2: -20,
+                                       yOffset2: -31)
                             
-                            VStack {
-                                Text("Upcoming Events")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .kerning(1.1)
-                                    .offset(x: -42, y: -37)
-                                
-                                Text("Go to your calender!")
-                                    .foregroundColor(.white)
-                                    .offset(x: -82, y: -32)
-                            }
-                        }
-                        
-                        ZStack {
-                            Link(destination: URL(string: "https://apple.com")!) {
-                                Image("NorthCreek5")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 340, height: 150)
-                                    .brightness(-0.2)
-                                    .blur(radius: 2)
-                                    .cornerRadius(10)
-                            }
-                            
-                            VStack {
-                                Text("Important Links")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .kerning(1.1)
-                                    .offset(x: -54, y: -34)
-                                
-                                Text("Links that you should know.")
-                                    .foregroundColor(.white)
-                                    .offset(x: -53, y: -29)
-                            }
-                        }
-                        
-                        ZStack {
-                            Link(destination: URL(string: "https://apple.com")!) {
-                                Image("NorthCreek2")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 340, height: 150)
-                                    .brightness(-0.2)
-                                    .blur(radius: 2)
-                                    .cornerRadius(10)
-                            }
-                            
-                            VStack {
-                                Text("Teacher Info")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .kerning(1.1)
-                                    .offset(x: -75, y: -25)
-                                
-                                Text("A way to connect easily with your student’s teachers.")
-                                    .foregroundColor(.white)
-                                    .offset(x: -27, y: -20)
-                            }
-                        }
-                        
-                        ZStack {
-                            Link(destination: URL(string: "https://apple.com")!) {
-                                Image("NorthCreek6")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 340, height: 150)
-                                    .brightness(-0.2)
-                                    .blur(radius: 2)
-                                    .cornerRadius(10)
-                            }
-                            
-                            VStack {
-                                Text("School Map")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .kerning(1.1)
-                                    .offset(x: -79, y: -36)
-                                
-                                
-                                Text("For if you ever get lost in our school.")
-                                    .foregroundColor(.white)
-                                    .offset(x: -20, y: -31)
-                            }
-                        }
-                        
-                        ZStack {
-                            Link(destination: URL(string: "https://apple.com")!) {
-                                Image("NorthCreek3")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 340, height: 150)
-                                    .brightness(-0.3)
-                                    .blur(radius: 2)
-                                    .cornerRadius(10)
-                            }
-                            
-                            VStack {
-                                Text("Bug Report")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .kerning(1.1)
-                                    .offset(x: -83, y: -28)
-                                
-                                Text("Encountered a bug or have feedback?")
-                                    .foregroundColor(.white)
-                                    .offset(x: -15, y: -23)
-                                
-                                Text("Click here to sumbmit a request.")
-                                    .foregroundColor(.white)
-                                    .offset(x: -35, y: -20)
-                            }
+                            LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
+                                       imageName: "NorthCreek3",
+                                       brightness: -0.3,
+                                       blur: 2,
+                                       text1: "Bug Report",
+                                       xOffset1: -83,
+                                       yOffset1: -28,
+                                       text2: "Encountered a bug or have feedback?",
+                                       xOffset2: -15,
+                                       yOffset2: -23)
                         }
                     }
                     .navigationBarHidden(true)
