@@ -8,18 +8,43 @@
 import SwiftUI
 
 struct Calender: View {
+    @State private var date = Date()
+    @State private var showPopUp = false
+    
     var body: some View {
         NavigationView {
-            Image("MyNCHSBackground")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .edgesIgnoringSafeArea(.all)
-                .offset(x: -21.44)
-            
             ScrollView {
                 VStack {
+                    Text("School Calender")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.purple)
+                        .offset(y: 10)
                     
+                    Image("SchoolCalender")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .edgesIgnoringSafeArea(.all)
+                    
+//                    Image("ActivitiesSchedule")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .edgesIgnoringSafeArea(.all)
                 
+                    DatePicker(
+                            "Start Date",
+                            selection: $date,
+                            displayedComponents: .date
+                        )
+                        .datePickerStyle(.graphical)
+                    
+                    Button("Date") {
+                        showPopUp.toggle()
+                    }
+                    .popover(isPresented: $showPopUp) {
+                        Text(date, style: .date)
+                    }
+                        
                 }
                 .navigationBarHidden(true)
                 .padding()

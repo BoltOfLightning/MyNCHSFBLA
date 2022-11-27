@@ -13,8 +13,8 @@ struct ContentView: View {
   
   var body: some View {
       switch viewModel.state {
-      case .signedIn: Menu()
-      case .signedOut: LoginView()
+        case .signedIn: Menu()
+        case .signedOut: LoginView()
     }
   }
 }

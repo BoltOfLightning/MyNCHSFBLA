@@ -19,6 +19,12 @@ struct Menu: View {
                     Text("Home")
                 }
             
+            News().navigationTitle("x")
+                .tabItem {
+                    Image(systemName: "newspaper")
+                    Text("News")
+                }
+            
             Calender().navigationTitle("x")
                 .tabItem {
                     Image(systemName: "calendar")
@@ -34,12 +40,6 @@ struct Menu: View {
             Info().navigationTitle("x")
                 .tabItem {
                     Image(systemName: "info.circle")
-                    Text("Info")
-                }
-            
-            Settings().navigationTitle("x")
-                .tabItem {
-                    Image(systemName: "person.circle.fill")
                     Text("Info")
                 }
         }

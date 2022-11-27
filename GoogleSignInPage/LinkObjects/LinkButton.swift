@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct LinkButton: View {
-    @State private var showWebView = false
+    @State var showWebView = false
     
     var url: URL
     var imageName: String
+    var imageWidth: CGFloat
+    var imageHeight: CGFloat
     var brightness: Double
     var blur: Double
     var text1: String
@@ -20,6 +22,7 @@ struct LinkButton: View {
     var text2: String
     var xOffset2: CGFloat
     var yOffset2: CGFloat
+    var color: Color
     
     var body: some View {
         Button {
@@ -28,8 +31,9 @@ struct LinkButton: View {
             ZStack {
                 Image(imageName)
                     .resizable()
+                    .scaledToFit()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 340, height: 150)
+                    .frame(width: imageWidth, height: imageHeight)
                     .brightness(brightness)
                     .blur(radius: blur)
                     .cornerRadius(10)
@@ -37,13 +41,13 @@ struct LinkButton: View {
                 VStack {
                     Text(text1)
                         .font(.title)
-                        .foregroundColor(.white)
+                        .foregroundColor(color)
                         .fontWeight(.medium)
                         .kerning(1.1)
                         .offset(x: xOffset1, y: yOffset1)
                     
                     Text(text2)
-                        .foregroundColor(.white)
+                        .foregroundColor(color)
                         .offset(x: xOffset2, y: yOffset2)
                 }
             }

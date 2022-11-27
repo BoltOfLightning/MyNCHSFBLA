@@ -79,6 +79,8 @@ struct Home: View {
                         VStack {
                             LinkButton(url: URL(string: "https://grades.nsd.org")!,
                                        imageName: "NorthCreek8",
+                                       imageWidth: 340,
+                                       imageHeight: 150,
                                        brightness: -0.3,
                                        blur: 3,
                                        text1: "Student Info",
@@ -86,10 +88,13 @@ struct Home: View {
                                        yOffset1: -30,
                                        text2: "An easy way to check your student(s) grades, etc.",
                                        xOffset2: -15,
-                                       yOffset2: -25)
+                                       yOffset2: -25,
+                                       color: .white)
                             
                             LinkButton(url: URL(string: "https://wa-northshore.intouchreceipting.com")!,
                                        imageName: "NorthCreek4",
+                                       imageWidth: 340,
+                                       imageHeight: 150,
                                        brightness: -0.25,
                                        blur: 2,
                                        text1: "Payments",
@@ -97,10 +102,13 @@ struct Home: View {
                                        yOffset1: -40,
                                        text2: "You will be redirected to Touchbase.",
                                        xOffset2: -23,
-                                       yOffset2: -37)
+                                       yOffset2: -37,
+                                       color: .white)
                             
                             LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/calendar")!,
                                        imageName: "NorthCreek7",
+                                       imageWidth: 340,
+                                       imageHeight: 150,
                                        brightness: -0.25,
                                        blur: 2,
                                        text1: "Upcoming Events",
@@ -108,10 +116,13 @@ struct Home: View {
                                        yOffset1: -37,
                                        text2: "Go to your calender!",
                                        xOffset2: -82,
-                                       yOffset2: -32)
+                                       yOffset2: -32,
+                                       color: .white)
                             
                             LinkButton(url: URL(string: "https://northcreek.nsd.org/")!,
                                        imageName: "NorthCreek5",
+                                       imageWidth: 340,
+                                       imageHeight: 150,
                                        brightness: -0.2,
                                        blur: 2,
                                        text1: "Important Links",
@@ -119,12 +130,15 @@ struct Home: View {
                                        yOffset1: -34,
                                        text2: "Links that you should know.",
                                        xOffset2: -53,
-                                       yOffset2: -29)
+                                       yOffset2: -29,
+                                       color: .white)
                         }
                         
                         VStack {
                             LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/school-directory")!,
                                        imageName: "NorthCreek2",
+                                       imageWidth: 340,
+                                       imageHeight: 150,
                                        brightness: -0.2,
                                        blur: 2,
                                        text1: "Teacher Info",
@@ -132,10 +146,13 @@ struct Home: View {
                                        yOffset1: -25,
                                        text2: "A way to connect easily with your student’s teachers.",
                                        xOffset2: -27,
-                                       yOffset2: -20)
+                                       yOffset2: -20,
+                                       color: .white)
                             
                             LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/parking-transportation")!,
                                        imageName: "NorthCreek6",
+                                       imageWidth: 340,
+                                       imageHeight: 150,
                                        brightness: -0.2,
                                        blur: 2,
                                        text1: "School Map",
@@ -143,10 +160,13 @@ struct Home: View {
                                        yOffset1: -36,
                                        text2: "For if you ever get lost in our school.",
                                        xOffset2: -20,
-                                       yOffset2: -31)
+                                       yOffset2: -31,
+                                       color: .white)
                             
                             LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
                                        imageName: "NorthCreek3",
+                                       imageWidth: 340,
+                                       imageHeight: 150,
                                        brightness: -0.3,
                                        blur: 2,
                                        text1: "Bug Report",
@@ -154,7 +174,8 @@ struct Home: View {
                                        yOffset1: -28,
                                        text2: "Encountered a bug or have feedback?",
                                        xOffset2: -15,
-                                       yOffset2: -23)
+                                       yOffset2: -23,
+                                       color: .white)
                         }
                     }
                     .navigationBarHidden(true)
