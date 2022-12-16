@@ -54,11 +54,7 @@ struct Info: View {
                         .fontWeight(.light)
                         .kerning(1.1)
                     
-                    let columns = [
-                            GridItem(.adaptive(minimum: 135))
-                        ]
-                        
-                    LazyVGrid(columns: columns) {
+                    HStack {
                         LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
                                    imageName: "InstagramLogo",
                                    imageWidth: 100,
@@ -100,30 +96,36 @@ struct Info: View {
                                    xOffset2: -15,
                                    yOffset2: -23,
                                    color: .black)
-                        .padding(.top, 20)
                     }
+                    .offset(x: -10, y: 30)
                     .padding(30)
-                    .background(.gray)
+                    .background(.black.opacity(0.1))
                     .cornerRadius(10)
                     .padding(.bottom, 50)
                     
                     LinkText(url: URL(string: "https://northcreek.nsd.org")!,
+                             width: 250,
                              text1: "Our Website",
                              xOffset1: 0,
                              yOffset1: 0,
-                             color: .white)
+                             color: .white,
+                             color2: .purple)
                     
                     LinkText(url: URL(string: "https://northcreek.nsd.org")!,
+                             width: 250,
                              text1: "Mission Statement",
                              xOffset1: 0,
                              yOffset1: 0,
-                             color: .white)
+                             color: .white,
+                             color2: .purple)
                     
                     LinkText(url: URL(string: "https://northcreek.nsd.org")!,
+                             width: 250,
                              text1: "Vision Statement",
                              xOffset1: 0,
                              yOffset1: 0,
-                             color: .white)
+                             color: .white,
+                             color2: .purple)
                     
                     // 4
                     Button(action: viewModel.signOut) {

@@ -10,6 +10,7 @@ import SwiftUI
 struct Calender: View {
     @State private var date = Date()
     @State private var showPopUp = false
+    let dateFormatter = DateFormatter()
     
     var body: some View {
         NavigationView {
@@ -38,11 +39,16 @@ struct Calender: View {
                         )
                         .datePickerStyle(.graphical)
                     
+                    
                     Button("Date") {
                         showPopUp.toggle()
                     }
                     .popover(isPresented: $showPopUp) {
                         Text(date, style: .date)
+//                        dateFormatter.dateStyle = .long
+//                        if dateFormatter.string(from: date) == "November 28, 2022" {
+//                            Text("Why hello there")
+//                        }
                     }
                         
                 }

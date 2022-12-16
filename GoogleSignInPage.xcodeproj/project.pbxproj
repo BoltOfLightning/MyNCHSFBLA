@@ -10,6 +10,7 @@
 		2731833929122778005082D9 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731833829122778005082D9 /* Menu.swift */; };
 		2731833B291227C9005082D9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731833A291227C9005082D9 /* Home.swift */; };
 		27318341291234E0005082D9 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27318340291234E0005082D9 /* Info.swift */; };
+		2751D97F294C33DD00336779 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D97E294C33DD00336779 /* ImagePickerView.swift */; };
 		277170DD286E763600FC0440 /* GoogleSignInPageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170DC286E763600FC0440 /* GoogleSignInPageApp.swift */; };
 		277170DF286E763600FC0440 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170DE286E763600FC0440 /* ContentView.swift */; };
 		277170E1286E763800FC0440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277170E0286E763800FC0440 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		277170F6286F984B00FC0440 /* AuthenticatioonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170F5286F984B00FC0440 /* AuthenticatioonViewModel.swift */; };
 		277170F8286F99B100FC0440 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170F7286F99B100FC0440 /* GoogleSignInButton.swift */; };
 		277170FA286F99FD00FC0440 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170F9286F99FD00FC0440 /* LoginView.swift */; };
+		2774BD162945778200056FDC /* cameraToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774BD152945778200056FDC /* cameraToText.swift */; };
 		277AEB3A2910CE5100587277 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 277AEB372910CBB400587277 /* GoogleService-Info.plist */; };
 		27A8C82D29303B3F00E9C2E9 /* LinkText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8C82C29303B3F00E9C2E9 /* LinkText.swift */; };
 		27A8C82F29303D7D00E9C2E9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8C82E29303D7D00E9C2E9 /* News.swift */; };
@@ -33,6 +35,7 @@
 		2731833829122778005082D9 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		2731833A291227C9005082D9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		27318340291234E0005082D9 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		2751D97E294C33DD00336779 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		277170D9286E763600FC0440 /* GoogleSignInPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSignInPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277170DC286E763600FC0440 /* GoogleSignInPageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInPageApp.swift; sourceTree = "<group>"; };
 		277170DE286E763600FC0440 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 		277170F5286F984B00FC0440 /* AuthenticatioonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatioonViewModel.swift; sourceTree = "<group>"; };
 		277170F7286F99B100FC0440 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		277170F9286F99FD00FC0440 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2774BD152945778200056FDC /* cameraToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraToText.swift; sourceTree = "<group>"; };
 		277AEB372910CBB400587277 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27A8C82C29303B3F00E9C2E9 /* LinkText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkText.swift; sourceTree = "<group>"; };
 		27A8C82E29303D7D00E9C2E9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -91,7 +95,9 @@
 				27A8C82E29303D7D00E9C2E9 /* News.swift */,
 				27B2B1E3291C7FFF0072A09D /* Calender.swift */,
 				27B2B1E5291C80350072A09D /* Messages.swift */,
+				2751D97E294C33DD00336779 /* ImagePickerView.swift */,
 				27318340291234E0005082D9 /* Info.swift */,
+				2774BD152945778200056FDC /* cameraToText.swift */,
 				2731833829122778005082D9 /* Menu.swift */,
 				27B140B12927155500185A5A /* WebView.swift */,
 				277170F7286F99B100FC0440 /* GoogleSignInButton.swift */,
@@ -211,6 +217,8 @@
 				277170F6286F984B00FC0440 /* AuthenticatioonViewModel.swift in Sources */,
 				277170FA286F99FD00FC0440 /* LoginView.swift in Sources */,
 				2731833B291227C9005082D9 /* Home.swift in Sources */,
+				2774BD162945778200056FDC /* cameraToText.swift in Sources */,
+				2751D97F294C33DD00336779 /* ImagePickerView.swift in Sources */,
 				27B140B22927155500185A5A /* WebView.swift in Sources */,
 				277170DD286E763600FC0440 /* GoogleSignInPageApp.swift in Sources */,
 				27B2B1E4291C7FFF0072A09D /* Calender.swift in Sources */,
@@ -346,6 +354,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoogleSignInPage/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "I need to use the camera to send pictures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -376,6 +385,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoogleSignInPage/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "I need to use the camera to send pictures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
