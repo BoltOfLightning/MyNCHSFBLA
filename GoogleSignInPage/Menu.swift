@@ -17,31 +17,34 @@ struct Menu: View {
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
-                }
+                }.tag(0)
             
             News().navigationTitle("x")
                 .tabItem {
                     Image(systemName: "newspaper")
                     Text("News")
-                }
+                }.tag(1)
             
             Calender().navigationTitle("x")
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Calender")
-                }
+                }.tag(2)
             
             Messages().navigationTitle("x")
                 .tabItem {
                     Image(systemName: "message")
                     Text("Messages")
-                }
+                }.tag(3)
             
             Info().navigationTitle("x")
                 .tabItem {
-                    Image(systemName: "info.circle")
+                    NetworkImage(url: user?.profile?.imageURL(withDimension: 20))
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100, alignment: .center)
+                        .cornerRadius(20)
                     Text("Info")
-                }
+                }.tag(4)
         }
     }
 }

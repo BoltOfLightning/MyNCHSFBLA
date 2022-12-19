@@ -13,85 +13,83 @@ struct Messages: View {
     @State private var selectedImage: UIImage?
     @State private var isImagePickerDisplay = false
     
+    @State var items : [Any] = []
+    @State var sheet = false
+    
     var body: some View {
         NavigationView {
-            VStack {
-                
-                if selectedImage != nil {
-                    Image(uiImage: selectedImage!)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(Circle())
-                        .frame(width: 300, height: 300)
-                    //ShareLink(item: selectedImage!, preview: SharePreview("Big Ben",image: selectedImage!))
+            ScrollView {
+                VStack {
+                    Text("Messages")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.purple)
+                        .offset(y: 10)
+                    
+                    if selectedImage != nil {
+                        Image(uiImage: selectedImage!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Circle())
+                            .frame(width: 300, height: 300)
 
-                } else {
-                    Image(systemName: "snow")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(Circle())
-                        .frame(width: 300, height: 300)
+                    } else {
+                        Image("NorthCreek1")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Circle())
+                            .frame(width: 300, height: 300)
+                    }
+                    
+                    Button("Camera") {
+                        self.sourceType = .camera
+                        self.isImagePickerDisplay.toggle()
+                    }.padding()
+                    
+                    Button("photo") {
+                        self.sourceType = .photoLibrary
+                        self.isImagePickerDisplay.toggle()
+                    }.padding()
+                    
+                    VStack {
+                        Button {
+                            items.removeAll()
+                            items.append(selectedImage!)
+                            sheet.toggle()
+                        } label: {
+                            Text("Share")
+                        }
+                    }
+                    .sheet(isPresented: $sheet, content: {
+                        ShareSheet(items: items)
+                    })
                 }
-                
-                Button("Camera") {
-                    self.sourceType = .camera
-                    self.isImagePickerDisplay.toggle()
-                }.padding()
-                
-                Button("photo") {
-                    self.sourceType = .photoLibrary
-                    self.isImagePickerDisplay.toggle()
-                }.padding()
-            }
-            .navigationBarTitle("Demo")
-            .sheet(isPresented: self.$isImagePickerDisplay) {
-                ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
+                .sheet(isPresented: self.$isImagePickerDisplay) {
+                    ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
+                }
             }
             
         }
     }
 }
 
-//public struct ImageWrapper: Codable {
-//
-//    // Enums
-//
-//    public enum CodingKeys: String, CodingKey {
-//        case image
-//    }
-//
-//    // Properties
-//
-//    public let image: UIImage
-//
-//    // Inits
-//
-//    public init(image: UIImage) {
-//        self.image = image
-//    }
-//
-//    // Methods
-//
-//    public init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        let data = try container.decode(Data.self, forKey: CodingKeys.image)
-//        if let image = UIImage(data: data) {
-//            self.image = image
-//        } else {
-//            // Error Decode
-//        }
-//    }
-//
-//    public func encode(to encoder: Encoder) throws {
-//        var container = encoder.container(keyedBy: CodingKeys.self)
-//        if let imageData: Data = image.pngData() {
-//            try container.encode(imageData, forKey: .image)
-//        } else {
-//            // Error Encode
-//        }
-//    }
-//
-//}
+struct Messages_Previews: PreviewProvider {
+    static var previews: some View {
+        Messages()
+    }
+}
 
-
-
+struct ShareSheet : UIViewControllerRepresentable {
+    
+    var items : [Any]
+    
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        let controller = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
+        
+    }
+}
