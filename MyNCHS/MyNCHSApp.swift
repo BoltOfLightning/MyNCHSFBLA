@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 @main
-struct GoogleSignInPageApp: App {
+struct MyNCHSApp: App {
     @StateObject var viewModel = AuthenticationViewModel()
 
     init() {
@@ -24,7 +24,7 @@ struct GoogleSignInPageApp: App {
     }
 }
 
-extension GoogleSignInPageApp {
+extension MyNCHSApp {
   private func setupAuthentication() {
     FirebaseApp.configure()
   }
