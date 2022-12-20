@@ -17,6 +17,7 @@ struct LinkText: View {
     var yOffset1: CGFloat
     var color: Color
     var color2: Color
+    var padding: CGFloat
     
     var body: some View {
         Button {
@@ -30,9 +31,9 @@ struct LinkText: View {
                 .frame(width: width, height:.infinity)
                 .offset(x: xOffset1, y: yOffset1)
         }
+        .padding(padding)
         .background(color2)
         .cornerRadius(10)
-        .padding(0.5)
         .sheet(isPresented: $showWebView) {
             WebView(url: url)
         }

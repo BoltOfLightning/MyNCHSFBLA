@@ -9,10 +9,7 @@ import SwiftUI
 import GoogleSignIn
 
 struct Info: View {
-    // 1
     @EnvironmentObject var viewModel: AuthenticationViewModel
-    
-    // 2
     private let user = GIDSignIn.sharedInstance.currentUser
     
     var body: some View {
@@ -27,7 +24,6 @@ struct Info: View {
                         .padding(.bottom, 20)
                     
                     HStack {
-                        // 3
                         NetworkImage(url: user?.profile?.imageURL(withDimension: 200))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 100, height: 100, alignment: .center)
@@ -54,80 +50,49 @@ struct Info: View {
                         .fontWeight(.light)
                         .kerning(1.1)
                     
-                    HStack {
-                        LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
-                                   imageName: "InstagramLogo",
-                                   imageWidth: 100,
-                                   imageHeight: 100,
-                                   brightness: 0,
-                                   blur: 0,
-                                   text1: "",
-                                   xOffset1: 0,
-                                   yOffset1: -30,
-                                   text2: "",
-                                   xOffset2: -15,
-                                   yOffset2: -23,
-                                   color: .black)
+                    Logos()
+                        .padding(10)
+                        .background(.black.opacity(0.1))
+                        .cornerRadius(10)
+                    
+                    VStack {
+                        LinkText(url: URL(string: "https://northcreek.nsd.org/our-school/weather-emergency-information")!,
+                                 width: 250,
+                                 text1: "Closures & Delays",
+                                 xOffset1: 0,
+                                 yOffset1: 0,
+                                 color: .white,
+                                 color2: .purple.opacity(0.75),
+                                 padding: 15)
                         
-                        LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
-                                   imageName: "TwitterLogo",
-                                   imageWidth: 100,
-                                   imageHeight: 100,
-                                   brightness: 0,
-                                   blur: 0,
-                                   text1: "",
-                                   xOffset1: 0,
-                                   yOffset1: -30,
-                                   text2: "",
-                                   xOffset2: -15,
-                                   yOffset2: -23,
-                                   color: .black)
+                        LinkText(url: URL(string: "https://northcreek.nsd.org/our-school/enrollment")!,
+                                 width: 250,
+                                 text1: "Enrollment",
+                                 xOffset1: 0,
+                                 yOffset1: 0,
+                                 color: .white,
+                                 color2: .purple.opacity(0.75),
+                                 padding: 15)
                         
-                        LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
-                                   imageName: "FacebookLogo",
-                                   imageWidth: 100,
-                                   imageHeight: 100,
-                                   brightness: 0,
-                                   blur: 0,
-                                   text1: "",
-                                   xOffset1: 0,
-                                   yOffset1: -30,
-                                   text2: "",
-                                   xOffset2: -15,
-                                   yOffset2: -23,
-                                   color: .black)
+                        LinkText(url: URL(string: "https://northcreek.nsd.org/our-school/schedule")!,
+                                 width: 250,
+                                 text1: "Schedules",
+                                 xOffset1: 0,
+                                 yOffset1: 0,
+                                 color: .white,
+                                 color2: .purple.opacity(0.75),
+                                 padding: 15)
+                        
+                        LinkText(url: URL(string: "https://northcreek.nsd.org/our-school/safety-and-security")!,
+                                 width: 250,
+                                 text1: "Safety and Security",
+                                 xOffset1: 0,
+                                 yOffset1: 0,
+                                 color: .white,
+                                 color2: .purple.opacity(0.75),
+                                 padding: 15)
                     }
-                    .offset(x: -10, y: 30)
-                    .padding(30)
-                    .background(.black.opacity(0.1))
-                    .cornerRadius(10)
-                    .padding(.bottom, 50)
                     
-                    LinkText(url: URL(string: "https://northcreek.nsd.org")!,
-                             width: 250,
-                             text1: "Our Website",
-                             xOffset1: 0,
-                             yOffset1: 0,
-                             color: .white,
-                             color2: .purple)
-                    
-                    LinkText(url: URL(string: "https://northcreek.nsd.org")!,
-                             width: 250,
-                             text1: "Mission Statement",
-                             xOffset1: 0,
-                             yOffset1: 0,
-                             color: .white,
-                             color2: .purple)
-                    
-                    LinkText(url: URL(string: "https://northcreek.nsd.org")!,
-                             width: 250,
-                             text1: "Vision Statement",
-                             xOffset1: 0,
-                             yOffset1: 0,
-                             color: .white,
-                             color2: .purple)
-                    
-                    // 4
                     Button(action: viewModel.signOut) {
                         Text("Sign out")
                             .foregroundColor(.white)

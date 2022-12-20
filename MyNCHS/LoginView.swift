@@ -20,38 +20,32 @@ struct LoginView: View {
             Image("MyNCHSBackground")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(width: 500, height: 950)
                 .edgesIgnoringSafeArea(.all)
-                .offset(x: -21.44)
+                
             
             VStack {
-                Image("NCHS")
+                Image("Logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(width: 200, height: 200)
                     .clipShape(Circle())
                     .shadow(radius: 5)
-                    .offset(y: 120)
+                    .offset(y: 220)
 
                 Text("MyNCHS")
                     .fontWeight(.black)
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
-                    .offset(y: 120)
+                    .offset(y: 220)
                 
                 Text("Together we rise.")
                     .fontWeight(.light)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .padding(.top, -5)
-                    .offset(y: 120)
-                    
-//                GoogleSignInButton()
-//                    .padding()
-//                    .clipShape(Capsule())
-//                    .onTapGesture {
-//                        viewModel.signIn()
-//                    }
-//                    .offset(y: 200)
+                    .offset(y: 220)
                 
                 Button {
                     viewModel.signIn()
@@ -63,7 +57,7 @@ struct LoginView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 28, height: 28)
                         
-                        Text("Create Account")
+                        Text("Google Sign in")
                             .font(.title3)
                             .fontWeight(.medium)
                             .kerning(1.1)
@@ -76,7 +70,9 @@ struct LoginView: View {
                             .strokeBorder(.purple)
                     )
                 }
-                .offset(y: 200)
+                .offset(y: 300)
+                
+                Spacer()
                 
                 Text("Made lovingly by Sai, Bryan, and Rithin")
                     .font(.body.bold())

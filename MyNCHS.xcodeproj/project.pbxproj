@@ -24,6 +24,16 @@
 		277AEB3A2910CE5100587277 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 277AEB372910CBB400587277 /* GoogleService-Info.plist */; };
 		27A8C82D29303B3F00E9C2E9 /* LinkText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8C82C29303B3F00E9C2E9 /* LinkText.swift */; };
 		27A8C82F29303D7D00E9C2E9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8C82E29303D7D00E9C2E9 /* News.swift */; };
+		27AC47E8295125BF007E0485 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47D7295125BE007E0485 /* Event.swift */; };
+		27AC47E9295125BF007E0485 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47D8295125BE007E0485 /* EventStore.swift */; };
+		27AC47EA295125BF007E0485 /* EventFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47DB295125BE007E0485 /* EventFormViewModel.swift */; };
+		27AC47EB295125BF007E0485 /* EventFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47DC295125BE007E0485 /* EventFormView.swift */; };
+		27AC47EC295125BF007E0485 /* EventFormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47DD295125BE007E0485 /* EventFormType.swift */; };
+		27AC47EF295125BF007E0485 /* EventsCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47E1295125BE007E0485 /* EventsCalendarView.swift */; };
+		27AC47F0295125BF007E0485 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47E2295125BE007E0485 /* CalendarView.swift */; };
+		27AC47F3295125BF007E0485 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47E7295125BF007E0485 /* Date+Extension.swift */; };
+		27AC47F52951294F007E0485 /* DaysEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47F42951294F007E0485 /* DaysEvents.swift */; };
+		27AC47F92951297B007E0485 /* ListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47F72951297B007E0485 /* ListViewRow.swift */; };
 		27B140B22927155500185A5A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B140B12927155500185A5A /* WebView.swift */; };
 		27B140B6292716E700185A5A /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B140B5292716E700185A5A /* LinkButton.swift */; };
 		27B2B1E4291C7FFF0072A09D /* Calender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2B1E3291C7FFF0072A09D /* Calender.swift */; };
@@ -46,6 +56,16 @@
 		277AEB372910CBB400587277 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27A8C82C29303B3F00E9C2E9 /* LinkText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkText.swift; sourceTree = "<group>"; };
 		27A8C82E29303D7D00E9C2E9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		27AC47D7295125BE007E0485 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		27AC47D8295125BE007E0485 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		27AC47DB295125BE007E0485 /* EventFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFormViewModel.swift; sourceTree = "<group>"; };
+		27AC47DC295125BE007E0485 /* EventFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFormView.swift; sourceTree = "<group>"; };
+		27AC47DD295125BE007E0485 /* EventFormType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFormType.swift; sourceTree = "<group>"; };
+		27AC47E1295125BE007E0485 /* EventsCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarView.swift; sourceTree = "<group>"; };
+		27AC47E2295125BE007E0485 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		27AC47E7295125BF007E0485 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		27AC47F42951294F007E0485 /* DaysEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysEvents.swift; sourceTree = "<group>"; };
+		27AC47F72951297B007E0485 /* ListViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRow.swift; sourceTree = "<group>"; };
 		27B140B12927155500185A5A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		27B140B5292716E700185A5A /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		27B2B1E3291C7FFF0072A09D /* Calender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calender.swift; sourceTree = "<group>"; };
@@ -86,20 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				277170DC286E763600FC0440 /* MyNCHSApp.swift */,
-				27A8C830293041C700E9C2E9 /* LinkObjects */,
+				27AC47942950FEBF007E0485 /* SupportingFiles */,
 				277170DE286E763600FC0440 /* ContentView.swift */,
 				277170F9286F99FD00FC0440 /* LoginView.swift */,
 				2731833A291227C9005082D9 /* Home.swift */,
 				27A8C82E29303D7D00E9C2E9 /* News.swift */,
 				27B2B1E3291C7FFF0072A09D /* Calender.swift */,
 				27B2B1E5291C80350072A09D /* Messages.swift */,
-				2751D97E294C33DD00336779 /* ImagePickerView.swift */,
 				27318340291234E0005082D9 /* Info.swift */,
 				2731833829122778005082D9 /* Menu.swift */,
-				27B140B12927155500185A5A /* WebView.swift */,
-				277170F7286F99B100FC0440 /* GoogleSignInButton.swift */,
-				277170F5286F984B00FC0440 /* AuthenticatioonViewModel.swift */,
-				277AEB372910CBB400587277 /* GoogleService-Info.plist */,
 				277170E0286E763800FC0440 /* Assets.xcassets */,
 				277170E2286E763800FC0440 /* Preview Content */,
 			);
@@ -121,6 +136,85 @@
 				27A8C82C29303B3F00E9C2E9 /* LinkText.swift */,
 			);
 			path = LinkObjects;
+			sourceTree = "<group>";
+		};
+		27AC47932950FE8C007E0485 /* CalenderFiles */ = {
+			isa = PBXGroup;
+			children = (
+				27AC47E6295125BF007E0485 /* Extensions */,
+				27AC47D6295125BE007E0485 /* Models */,
+				27AC47D9295125BE007E0485 /* Views */,
+			);
+			path = CalenderFiles;
+			sourceTree = "<group>";
+		};
+		27AC47942950FEBF007E0485 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2751D97E294C33DD00336779 /* ImagePickerView.swift */,
+				27B140B12927155500185A5A /* WebView.swift */,
+				27A8C830293041C700E9C2E9 /* LinkObjects */,
+				27AC47932950FE8C007E0485 /* CalenderFiles */,
+				27AC47952950FEE3007E0485 /* GoogleSignin */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		27AC47952950FEE3007E0485 /* GoogleSignin */ = {
+			isa = PBXGroup;
+			children = (
+				277170F7286F99B100FC0440 /* GoogleSignInButton.swift */,
+				277170F5286F984B00FC0440 /* AuthenticatioonViewModel.swift */,
+				277AEB372910CBB400587277 /* GoogleService-Info.plist */,
+			);
+			path = GoogleSignin;
+			sourceTree = "<group>";
+		};
+		27AC47D6295125BE007E0485 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27AC47D7295125BE007E0485 /* Event.swift */,
+				27AC47D8295125BE007E0485 /* EventStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27AC47D9295125BE007E0485 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27AC47DA295125BE007E0485 /* EditUpdateView */,
+				27AC47DF295125BE007E0485 /* CalendarViewTab */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27AC47DA295125BE007E0485 /* EditUpdateView */ = {
+			isa = PBXGroup;
+			children = (
+				27AC47DB295125BE007E0485 /* EventFormViewModel.swift */,
+				27AC47DC295125BE007E0485 /* EventFormView.swift */,
+				27AC47DD295125BE007E0485 /* EventFormType.swift */,
+			);
+			path = EditUpdateView;
+			sourceTree = "<group>";
+		};
+		27AC47DF295125BE007E0485 /* CalendarViewTab */ = {
+			isa = PBXGroup;
+			children = (
+				27AC47E1295125BE007E0485 /* EventsCalendarView.swift */,
+				27AC47E2295125BE007E0485 /* CalendarView.swift */,
+				27AC47F42951294F007E0485 /* DaysEvents.swift */,
+				27AC47F72951297B007E0485 /* ListViewRow.swift */,
+			);
+			path = CalendarViewTab;
+			sourceTree = "<group>";
+		};
+		27AC47E6295125BF007E0485 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27AC47E7295125BF007E0485 /* Date+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,21 +297,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AC47EF295125BF007E0485 /* EventsCalendarView.swift in Sources */,
+				27AC47F52951294F007E0485 /* DaysEvents.swift in Sources */,
 				277170F8286F99B100FC0440 /* GoogleSignInButton.swift in Sources */,
+				27AC47F0295125BF007E0485 /* CalendarView.swift in Sources */,
 				27B140B6292716E700185A5A /* LinkButton.swift in Sources */,
 				27B2B1E6291C80350072A09D /* Messages.swift in Sources */,
 				27A8C82F29303D7D00E9C2E9 /* News.swift in Sources */,
 				277170DF286E763600FC0440 /* ContentView.swift in Sources */,
 				27A8C82D29303B3F00E9C2E9 /* LinkText.swift in Sources */,
+				27AC47F3295125BF007E0485 /* Date+Extension.swift in Sources */,
 				2731833929122778005082D9 /* Menu.swift in Sources */,
 				27318341291234E0005082D9 /* Info.swift in Sources */,
+				27AC47E8295125BF007E0485 /* Event.swift in Sources */,
 				277170F6286F984B00FC0440 /* AuthenticatioonViewModel.swift in Sources */,
+				27AC47F92951297B007E0485 /* ListViewRow.swift in Sources */,
+				27AC47EC295125BF007E0485 /* EventFormType.swift in Sources */,
 				277170FA286F99FD00FC0440 /* LoginView.swift in Sources */,
 				2731833B291227C9005082D9 /* Home.swift in Sources */,
 				2751D97F294C33DD00336779 /* ImagePickerView.swift in Sources */,
 				27B140B22927155500185A5A /* WebView.swift in Sources */,
+				27AC47E9295125BF007E0485 /* EventStore.swift in Sources */,
 				277170DD286E763600FC0440 /* MyNCHSApp.swift in Sources */,
 				27B2B1E4291C7FFF0072A09D /* Calender.swift in Sources */,
+				27AC47EB295125BF007E0485 /* EventFormView.swift in Sources */,
+				27AC47EA295125BF007E0485 /* EventFormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

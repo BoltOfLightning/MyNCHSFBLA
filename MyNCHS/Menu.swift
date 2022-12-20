@@ -6,22 +6,31 @@
 //
 
 import SwiftUI
-import GoogleSignIn
 
 struct Menu: View {
-    private let user = GIDSignIn.sharedInstance.currentUser
+    @State var selection = 0
     
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             Home().navigationTitle("x")
                 .tabItem {
-                    Image(systemName: "house")
+                    if selection == 0 {
+                        Image(systemName: "house.fill")
+                    } else {
+                        Image(systemName: "house")
+                    }
+                    
                     Text("Home")
                 }.tag(0)
             
             News().navigationTitle("x")
                 .tabItem {
-                    Image(systemName: "newspaper")
+                    if selection == 1 {
+                        Image(systemName: "newspaper.fill")
+                    } else {
+                        Image(systemName: "newspaper")
+                    }
+                    
                     Text("News")
                 }.tag(1)
             
@@ -33,16 +42,23 @@ struct Menu: View {
             
             Messages().navigationTitle("x")
                 .tabItem {
-                    Image(systemName: "message")
+                    if selection == 3 {
+                        Image(systemName: "message.fill")
+                    } else {
+                        Image(systemName: "message")
+                    }
+                    
                     Text("Messages")
                 }.tag(3)
             
             Info().navigationTitle("x")
                 .tabItem {
-                    NetworkImage(url: user?.profile?.imageURL(withDimension: 20))
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100, alignment: .center)
-                        .cornerRadius(20)
+                    if selection == 4 {
+                        Image(systemName: "info.circle.fill")
+                    } else {
+                        Image(systemName: "info.circle")
+                    }
+                    
                     Text("Info")
                 }.tag(4)
         }
