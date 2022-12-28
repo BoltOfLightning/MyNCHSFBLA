@@ -12,75 +12,66 @@ struct LoginView: View {
 
     var body: some View {
         ZStack {
-//            LinearGradient(gradient: Gradient(colors: [.purple, .white]),
-//                           startPoint: .top,
-//                           endPoint: .bottom)
-//                .edgesIgnoringSafeArea(.all)
-            
-            Image("MyNCHSBackground")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 500, height: 950)
+            Color("Color")
+                .opacity(0.8)
                 .edgesIgnoringSafeArea(.all)
-                
+            
+            Image("Background")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 500, height: 870)
+                .edgesIgnoringSafeArea(.all)
+                .offset(y: -12)
             
             VStack {
                 Image("Logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 200)
+                    .frame(width: 450, height: 450)
                     .clipShape(Circle())
                     .shadow(radius: 5)
-                    .offset(y: 220)
+                    .offset(y: -20)
 
                 Text("MyNCHS")
                     .fontWeight(.black)
                     .foregroundColor(.white)
-                    .font(.largeTitle)
+                    .font(Font.custom("Quicksand-Bold", size: 50))
                     .multilineTextAlignment(.center)
-                    .offset(y: 220)
+                    .offset(y: -200)
                 
-                Text("Together we rise.")
+                Text("Together we rise")
                     .fontWeight(.light)
+                    .font(Font.custom("Quicksand-Regular", size: 20))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
-                    .padding(.top, -5)
-                    .offset(y: 220)
+                    .offset(y: -200)
                 
                 Button {
                     viewModel.signIn()
                 } label: {
                     HStack {
+                        Spacer()
+                        
                         Image("Google Logo")
                             .resizable()
-                            .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 28, height: 28)
                         
-                        Text("Google Sign in")
-                            .font(.title3)
+                        Spacer()
+                        
+                        Text("SIGN IN WITH GOOGLE")
                             .fontWeight(.medium)
                             .kerning(1.1)
+                            .foregroundColor(.black)
+                        
+                        Spacer()
                     }
-                    .foregroundColor(.purple)
                     .padding()
-                    .frame(width: 250)
-                    .background(
-                        Capsule()
-                            .strokeBorder(.purple)
-                    )
+                    .frame(width: 350)
+                    .background(.white)
+                    .cornerRadius(50)
                 }
-                .offset(y: 300)
-                
-                Spacer()
-                
-                Text("Made lovingly by Sai, Bryan, and Rithin")
-                    .font(.body.bold())
-                    .foregroundColor(.gray)
-                    .kerning(1.1)
-                    .multilineTextAlignment(.center)
-                    .frame(maxHeight: .infinity, alignment: .bottom)
-                    .padding()
+                .offset(y: -190)
             }
         }
     }

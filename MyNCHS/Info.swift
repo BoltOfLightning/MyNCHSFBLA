@@ -105,7 +105,7 @@ struct Info: View {
                     
                     Text("Version Number 1.0")
                     
-                    LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
+                    LinkButton(url: URL(string: "https://forms.gle/BSK75wedtFHCZpFi7")!,
                                imageName: "NorthCreek3",
                                imageWidth: 340,
                                imageHeight: 150,

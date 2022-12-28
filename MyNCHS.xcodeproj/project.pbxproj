@@ -34,6 +34,9 @@
 		27AC47F3295125BF007E0485 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47E7295125BF007E0485 /* Date+Extension.swift */; };
 		27AC47F52951294F007E0485 /* DaysEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47F42951294F007E0485 /* DaysEvents.swift */; };
 		27AC47F92951297B007E0485 /* ListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47F72951297B007E0485 /* ListViewRow.swift */; };
+		27AC4801295AA455007E0485 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27AC4800295AA455007E0485 /* Quicksand-Bold.ttf */; };
+		27AC4803295AA508007E0485 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27AC4802295AA508007E0485 /* Quicksand-Regular.ttf */; };
+		27AC4805295B89E0007E0485 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27AC4804295B89E0007E0485 /* Quicksand-Medium.ttf */; };
 		27B140B22927155500185A5A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B140B12927155500185A5A /* WebView.swift */; };
 		27B140B6292716E700185A5A /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B140B5292716E700185A5A /* LinkButton.swift */; };
 		27B2B1E4291C7FFF0072A09D /* Calender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2B1E3291C7FFF0072A09D /* Calender.swift */; };
@@ -66,6 +69,9 @@
 		27AC47E7295125BF007E0485 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		27AC47F42951294F007E0485 /* DaysEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysEvents.swift; sourceTree = "<group>"; };
 		27AC47F72951297B007E0485 /* ListViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRow.swift; sourceTree = "<group>"; };
+		27AC4800295AA455007E0485 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		27AC4802295AA508007E0485 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		27AC4804295B89E0007E0485 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		27B140B12927155500185A5A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		27B140B5292716E700185A5A /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		27B2B1E3291C7FFF0072A09D /* Calender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calender.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		27AC47942950FEBF007E0485 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				27AC47FD295AA25D007E0485 /* Fonts */,
 				2751D97E294C33DD00336779 /* ImagePickerView.swift */,
 				27B140B12927155500185A5A /* WebView.swift */,
 				27A8C830293041C700E9C2E9 /* LinkObjects */,
@@ -215,6 +222,16 @@
 				27AC47E7295125BF007E0485 /* Date+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		27AC47FD295AA25D007E0485 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				27AC4802295AA508007E0485 /* Quicksand-Regular.ttf */,
+				27AC4800295AA455007E0485 /* Quicksand-Bold.ttf */,
+				27AC4804295B89E0007E0485 /* Quicksand-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +304,9 @@
 				277170E4286E763800FC0440 /* Preview Assets.xcassets in Resources */,
 				277170E1286E763800FC0440 /* Assets.xcassets in Resources */,
 				277AEB3A2910CE5100587277 /* GoogleService-Info.plist in Resources */,
+				27AC4801295AA455007E0485 /* Quicksand-Bold.ttf in Resources */,
+				27AC4803295AA508007E0485 /* Quicksand-Regular.ttf in Resources */,
+				27AC4805295B89E0007E0485 /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

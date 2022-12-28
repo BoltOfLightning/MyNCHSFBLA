@@ -10,177 +10,319 @@ import GoogleSignIn
 
 struct Home: View {
     private let user = GIDSignIn.sharedInstance.currentUser
+    @State var showWebView = false
+    @State var showWebView2 = false
+    @State var showWebView3 = false
+    @State var showWebView4 = false
     
     var body: some View {
         NavigationView {
             ScrollView {
-                ZStack {
-                    VStack {
-                        Text("MyNCHS")
-                            .font(.largeTitle)
-                            .bold()
-                            .foregroundColor(.purple)
-                            .offset(y: 10)
+                VStack {
+                    HStack {
+                        Text("Home")
+                            .font(Font.custom("Quicksand-Bold", size: 20))
+                            .foregroundColor(.white)
+                            .padding(15)
+                            .background(Color("Color"))
+                            .cornerRadius(30)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .offset(x: 20, y: 20)
                         
-                        Text("Welcome " + (user?.profile?.name ?? "") + "!")
-                            .font(.largeTitle)
-                            .foregroundColor(.purple)
-                            .padding(.bottom, 50)
-                            .offset(y: 10)
+                        Spacer()
                         
-                        ZStack {
-                            Image("NorthCreek1")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 340, height: 200)
-                                .brightness(-0.2)
-                                .blur(radius: 2)
-                                .cornerRadius(10)
-                                
-                            VStack {
-                                Text("Newsletter")
-                                    .font(.title)
-                                    .fontWeight(.medium)
-                                    .foregroundColor(.white)
-                                    .kerning(1.1)
-                                    .offset(x: -90, y: -15)
-                                
-                                Text("Catch up on the latest North Creek news")
-                                    .foregroundColor(.white)
-                                    .offset(x: -8, y: -11)
-                                
-                                Link(destination: URL(string: "https://apple.com")!) {
-                                    Text("Jaguar Family Bulletin #10")
-                                }
-                                .foregroundColor(.white)
-                                
-                                Link(destination: URL(string: "https://apple.com")!) {
-                                    Text("Jaguar Family Bulletin #9")
-                                }
-                                .foregroundColor(.white)
-                                
-                                Link(destination: URL(string: "https://apple.com")!) {
-                                    Text("Jaguar Family Bulletin #8")
-                                }
-                                .foregroundColor(.white)
-                                
-                                Link(destination: URL(string: "https://apple.com")!) {
-                                    Text("Jaguar Family Bulletin #7")
-                                }
-                                .foregroundColor(.white)
-                                
-                                Link(destination: URL(string: "https://apple.com")!) {
-                                    Text("See more newsletters here")
-                                }
-                                .foregroundColor(.white)
-                            }
-                        }
-                        
-                        VStack {
-                            LinkButton(url: URL(string: "https://grades.nsd.org")!,
-                                       imageName: "NorthCreek8",
-                                       imageWidth: 340,
-                                       imageHeight: 150,
-                                       brightness: -0.3,
-                                       blur: 3,
-                                       text1: "Student Info",
-                                       xOffset1: -80,
-                                       yOffset1: -30,
-                                       text2: "An easy way to check your student(s) grades, etc.",
-                                       xOffset2: -15,
-                                       yOffset2: -25,
-                                       color: .white)
-                            
-                            LinkButton(url: URL(string: "https://wa-northshore.intouchreceipting.com")!,
-                                       imageName: "NorthCreek4",
-                                       imageWidth: 340,
-                                       imageHeight: 150,
-                                       brightness: -0.25,
-                                       blur: 2,
-                                       text1: "Payments",
-                                       xOffset1: -95,
-                                       yOffset1: -40,
-                                       text2: "You will be redirected to Touchbase.",
-                                       xOffset2: -23,
-                                       yOffset2: -37,
-                                       color: .white)
-                            
-                            LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/calendar")!,
-                                       imageName: "NorthCreek7",
-                                       imageWidth: 340,
-                                       imageHeight: 150,
-                                       brightness: -0.25,
-                                       blur: 2,
-                                       text1: "Upcoming Events",
-                                       xOffset1: -42,
-                                       yOffset1: -37,
-                                       text2: "Go to your calender!",
-                                       xOffset2: -82,
-                                       yOffset2: -32,
-                                       color: .white)
-                            
-                            LinkButton(url: URL(string: "https://northcreek.nsd.org/")!,
-                                       imageName: "NorthCreek5",
-                                       imageWidth: 340,
-                                       imageHeight: 150,
-                                       brightness: -0.2,
-                                       blur: 2,
-                                       text1: "Important Links",
-                                       xOffset1: -54,
-                                       yOffset1: -34,
-                                       text2: "Links that you should know.",
-                                       xOffset2: -53,
-                                       yOffset2: -29,
-                                       color: .white)
-                        }
-                        
-                        VStack {
-                            LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/school-directory")!,
-                                       imageName: "NorthCreek2",
-                                       imageWidth: 340,
-                                       imageHeight: 150,
-                                       brightness: -0.2,
-                                       blur: 2,
-                                       text1: "Teacher Info",
-                                       xOffset1: -75,
-                                       yOffset1: -25,
-                                       text2: "A way to connect easily with your student’s teachers.",
-                                       xOffset2: -27,
-                                       yOffset2: -20,
-                                       color: .white)
-                            
-                            LinkButton(url: URL(string: "https://northcreek.nsd.org/our-school/parking-transportation")!,
-                                       imageName: "NorthCreek6",
-                                       imageWidth: 340,
-                                       imageHeight: 150,
-                                       brightness: -0.2,
-                                       blur: 2,
-                                       text1: "School Map",
-                                       xOffset1: -79,
-                                       yOffset1: -36,
-                                       text2: "For if you ever get lost in our school.",
-                                       xOffset2: -20,
-                                       yOffset2: -31,
-                                       color: .white)
-                            
-                            LinkButton(url: URL(string: "https://forms.gle/ZhQr55f7DxnM4HVr9")!,
-                                       imageName: "NorthCreek3",
-                                       imageWidth: 340,
-                                       imageHeight: 150,
-                                       brightness: -0.3,
-                                       blur: 2,
-                                       text1: "Bug Report",
-                                       xOffset1: -83,
-                                       yOffset1: -28,
-                                       text2: "Encountered a bug or have feedback?",
-                                       xOffset2: -15,
-                                       yOffset2: -23,
-                                       color: .white)
-                        }
+                        NetworkImage(url: user?.profile?.imageURL(withDimension: 200))
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50, alignment: .center)
+                            .cornerRadius(30)
+                            .offset(x: -20, y: 20)
                     }
-                    .navigationBarHidden(true)
-                    .padding()
                 }
+
+                Text("GOOD MORNING, " + (user?.profile?.name ?? "") + "")
+                    .font(Font.custom("Quicksand-Regular", size: 15))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .offset(x: 20, y: 30)
+                
+                VStack {
+                    HStack {
+                        VStack {
+                            HStack {
+                                Image(systemName: "sun.max.fill")
+                                    .renderingMode(.original)
+                                
+                                Text("SUNNY")
+                                    .font(Font.custom("Quicksand-Bold", size: 10))
+                            }
+                            .offset(y: 60)
+                            
+                            Text(Date.now, format: .dateTime.hour().minute())
+                                .font(Font.custom("Quicksand-Medium", size: 35))
+                                .offset(y: 60)
+                            
+                            Text(Date.now, format: .dateTime.day().month().year())
+                                .font(Font.custom("Quicksand-Regular", size: 15))
+                                .padding(.bottom, 20)
+                                .offset(y: 60)
+                            
+                            Text("Semester 1")
+                                .font(Font.custom("Quicksand-Bold", size: 10))
+                                .offset(y: 60)
+                            
+                            Image("Flower1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 100)
+                                .offset(x: -75, y: -20)
+                        }
+                        .frame(width: 170, height: 170)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("Color"), lineWidth: 5)
+                        )
+                        .padding(.trailing, 5)
+                        
+                        VStack {
+                            Text("“It always seems impossible until it's done”")
+                                .font(Font.custom("Quicksand-Medium", size: 17))
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom, 5)
+                            
+                            Text("NELSON MANDELA")
+                                .font(Font.custom("Quicksand-Regular", size: 10))
+                                .frame(alignment: .center)
+                        }
+                        .frame(width: 170, height: 170)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("Color"), lineWidth: 5)
+                        )
+                    }
+                    .padding(.bottom, 5)
+                    
+                    HStack {
+                        Button {
+                            showWebView.toggle()
+                        } label: {
+                            VStack {
+                                Text("NEWSLETTERS")
+                                    .font(Font.custom("Quicksand-Bold", size: 22))
+                                    .foregroundColor(Color("Color"))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .offset(x: 8, y: 56.5)
+                                
+                                Text("Jaguar Family Bulletin")
+                                    .font(Font.custom("Quicksand-Medium", size: 12))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .offset(x: 10, y: 60)
+                                
+                                Text("December")
+                                    .font(Font.custom("Quicksand-Regular", size: 8))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .offset(x: 10, y: 60)
+                                    .padding(.bottom, 3)
+                                
+                                Text("Jaguar Family Bulletin")
+                                    .font(Font.custom("Quicksand-Medium", size: 12))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .offset(x: 10, y: 60)
+                                
+                                Text("November")
+                                    .font(Font.custom("Quicksand-Regular", size: 8))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .offset(x: 10, y: 60)
+                                    .padding(.bottom, 3)
+                                
+                                Text("Jaguar Family Bulletin")
+                                    .font(Font.custom("Quicksand-Medium", size: 12))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .offset(x: 10, y: 60)
+                                
+                                Text("October")
+                                    .font(Font.custom("Quicksand-Regular", size: 8))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .offset(x: 10, y: 60)
+                                    .padding(.bottom, 3)
+                                
+                                Image("Flower2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 120, height: 120)
+                                    .offset(x: 70, y: -30)
+                                
+                            }
+                            .frame(width: 170, height: 170)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color("Color"), lineWidth: 5)
+                            )
+                            .padding(.trailing, 5)
+                        }
+                        .sheet(isPresented: $showWebView) {
+                            WebView(url: URL(string: "https://northcreek.nsd.org/our-school/school-news")!)
+                        }
+                        
+                        VStack {
+                            Text("STUDENT INFO")
+                                .font(Font.custom("Quicksand-Bold", size: 22))
+                                .foregroundColor(Color("Color"))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .offset(x: 7, y: 1.7)
+                            
+                            HStack {
+                                Button {
+                                    showWebView2.toggle()
+                                } label: {
+                                    VStack {
+                                        Text("Grades")
+                                            .font(Font.custom("Quicksand-Medium", size: 12))
+                                            .foregroundColor(.black)
+                                            .frame(maxWidth: .infinity, alignment: .center)
+                                        
+                                        Image("ParentVue")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 50, height: 50)
+                                            .cornerRadius(20)
+                                        
+                                    }
+                                    .frame(width: 60, height: 100)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color("Color"), lineWidth: 5)
+                                    )
+                                    .padding(.trailing, 5)
+                                }
+                                .sheet(isPresented: $showWebView2) {
+                                    WebView(url: URL(string: "https://wa-nor-psv.edupoint.com/PXP2_Login_Parent.aspx?regenerateSessionId=True")!)
+                                }
+                                
+                                Button {
+                                    showWebView3.toggle()
+                                } label: {
+                                    VStack {
+                                        Text("Payment")
+                                            .font(Font.custom("Quicksand-Medium", size: 12))
+                                            .foregroundColor(.black)
+                                            .frame(maxWidth: .infinity, alignment: .center)
+                                            .offset(y: 1)
+                                        
+                                        Image("NorthshoreLogo")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 50, height: 50)
+                                            .cornerRadius(20)
+                                    }
+                                    .frame(width: 60, height: 100)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color("Color"), lineWidth: 5)
+                                    )
+                                    .padding(.trailing, 5)
+                                }
+                                .sheet(isPresented: $showWebView3) {
+                                    WebView(url: URL(string: "https://wa-northshore.intouchreceipting.com/")!)
+                                }
+                            }
+                            
+                        }
+                        .frame(width: 170, height: 170)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("Color"), lineWidth: 5)
+                        )
+                    }
+                    .padding(.bottom, 5)
+                    
+                    
+                    HStack {
+                        VStack {
+                            Text("TEACHER INFO")
+                                .font(Font.custom("Quicksand-Bold", size: 22))
+                                .foregroundColor(Color("Color"))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .offset(x: 7, y: 44.7)
+
+                            Text("Alphabetical order")
+                                .font(Font.custom("Quicksand-Medium", size: 12))
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .offset(y: 44.7)
+                            
+                            Image("Flower3")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 80, height: 80)
+                                .offset(x: -70, y: 70)
+                            
+                            Button {
+                                showWebView4.toggle()
+                            } label: {
+                                VStack {
+                                    Text("Poonam Ahuja")
+                                        .font(Font.custom("Quicksand-Medium", size: 12))
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                    
+                                    Text("Ima Akpaidem")
+                                        .font(Font.custom("Quicksand-Medium", size: 12))
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                    
+                                    Text("Maasoma Alajami")
+                                        .font(Font.custom("Quicksand-Medium", size: 12))
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                    
+                                    Text("Carlos Aldrete")
+                                        .font(Font.custom("Quicksand-Medium", size: 12))
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                    
+                                    Text("Lisa Allen")
+                                        .font(Font.custom("Quicksand-Medium", size: 12))
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                    
+                                }
+                                .frame(width: 110, height: 60)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(Color("gray"), lineWidth: 10)
+                                )
+                                .padding()
+                                .background(.gray.opacity(0.1))
+                                .cornerRadius(10)
+                                .shadow(radius: 10)
+                                .padding(.trailing, 5)
+                                .offset(y: -44.7)
+                            }
+                            .sheet(isPresented: $showWebView4) {
+                                WebView(url: URL(string: "https://northcreek.nsd.org/our-school/school-directory")!)
+                            }
+                            
+                            
+                        }
+                        .frame(width: 170, height: 170)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("Color"), lineWidth: 5)
+                        )
+                        .padding(.trailing, 5)
+                        
+                        Image("HomePageBeach")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 170, height: 170)
+                    }
+                }
+                .offset(y: 40)
             }
         }
         .navigationViewStyle(.stack)

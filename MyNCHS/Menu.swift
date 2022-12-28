@@ -10,6 +10,10 @@ import SwiftUI
 struct Menu: View {
     @State var selection = 0
     
+//    init() {
+//       UITabBar.appearance().backgroundColor = UIColor.blue
+//    }
+    
     var body: some View {
         TabView(selection: $selection) {
             Home().navigationTitle("x")
@@ -19,8 +23,6 @@ struct Menu: View {
                     } else {
                         Image(systemName: "house")
                     }
-                    
-                    Text("Home")
                 }.tag(0)
             
             News().navigationTitle("x")
@@ -30,14 +32,15 @@ struct Menu: View {
                     } else {
                         Image(systemName: "newspaper")
                     }
-                    
-                    Text("News")
                 }.tag(1)
             
             Calender().navigationTitle("x")
                 .tabItem {
-                    Image(systemName: "calendar")
-                    Text("Calender")
+                    if selection == 1 {
+                        Image(systemName: "calendar")
+                    } else {
+                        Image(systemName: "calendar")
+                    }
                 }.tag(2)
             
             Messages().navigationTitle("x")
@@ -47,8 +50,6 @@ struct Menu: View {
                     } else {
                         Image(systemName: "message")
                     }
-                    
-                    Text("Messages")
                 }.tag(3)
             
             Info().navigationTitle("x")
@@ -58,10 +59,9 @@ struct Menu: View {
                     } else {
                         Image(systemName: "info.circle")
                     }
-                    
-                    Text("Info")
                 }.tag(4)
         }
+        //.tabViewStyle(PageTabViewStyle())
     }
 }
 

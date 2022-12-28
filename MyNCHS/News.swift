@@ -69,7 +69,7 @@ struct News: View {
                     }
                     .offset(y: 20)
                     
-                    LinkButton(url: URL(string: "https://forms.gle/TmHbjVf7tS9kubaR6")!,
+                    LinkButton(url: URL(string: "https://forms.gle/11Qe4sQqMxmFdVBm9")!,
                                imageName: "NorthCreek3",
                                imageWidth: 340,
                                imageHeight: 150,
