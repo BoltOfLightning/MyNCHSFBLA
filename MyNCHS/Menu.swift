@@ -10,10 +10,6 @@ import SwiftUI
 struct Menu: View {
     @State var selection = 0
     
-//    init() {
-//       UITabBar.appearance().backgroundColor = UIColor.blue
-//    }
-    
     var body: some View {
         TabView(selection: $selection) {
             Home().navigationTitle("x")

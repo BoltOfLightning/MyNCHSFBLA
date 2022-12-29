@@ -70,7 +70,7 @@ struct News: View {
                     .offset(y: 20)
                     
                     LinkButton(url: URL(string: "https://forms.gle/11Qe4sQqMxmFdVBm9")!,
-                               imageName: "NorthCreek3",
+                               imageName: "NorthCreek2",
                                imageWidth: 340,
                                imageHeight: 150,
                                brightness: -0.3,
@@ -109,67 +109,5 @@ struct News: View {
 struct News_Previews: PreviewProvider {
     static var previews: some View {
         News()
-    }
-}
-
-struct Logos: View {
-    var body: some View {
-        HStack {
-            LinkButton(url: URL(string: "https://www.instagram.com/northcreekasb/?hl=en")!,
-                       imageName: "InstagramLogo",
-                       imageWidth: 75,
-                       imageHeight: 75,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "",
-                       xOffset2: -15,
-                       yOffset2: -23,
-                       color: .black)
-            
-            LinkButton(url: URL(string: "https://twitter.com/northcreekhs")!,
-                       imageName: "TwitterLogo",
-                       imageWidth: 75,
-                       imageHeight: 75,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "",
-                       xOffset2: -15,
-                       yOffset2: -23,
-                       color: .black)
-            
-            LinkButton(url: URL(string: "https://m.facebook.com/people/North-Creek-High-School/100068372418596/")!,
-                       imageName: "FacebookLogo",
-                       imageWidth: 75,
-                       imageHeight: 75,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "",
-                       xOffset2: -15,
-                       yOffset2: -23,
-                       color: .black)
-            
-            LinkButton(url: URL(string: "https://www.youtube.com/@northcreekhighschoolasb7186")!,
-                       imageName: "YoutubeLogo",
-                       imageWidth: 85,
-                       imageHeight: 60,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "",
-                       xOffset2: -15,
-                       yOffset2: -23,
-                       color: .black)
-        }
     }
 }

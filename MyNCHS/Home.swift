@@ -25,7 +25,7 @@ struct Home: View {
                             .foregroundColor(.white)
                             .padding(15)
                             .background(Color("Color"))
-                            .cornerRadius(30)
+                            .cornerRadius(20)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .offset(x: 20, y: 20)
                         

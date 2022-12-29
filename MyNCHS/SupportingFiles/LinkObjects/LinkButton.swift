@@ -47,6 +47,7 @@ struct LinkButton: View {
                         .offset(x: xOffset1, y: yOffset1)
                     
                     Text(text2)
+                        .font(Font.custom("Quicksand-Bold", size: 10))
                         .foregroundColor(color)
                         .offset(x: xOffset2, y: yOffset2)
                 }

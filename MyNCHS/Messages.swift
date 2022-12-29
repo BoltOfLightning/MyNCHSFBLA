@@ -70,6 +70,7 @@ struct Messages: View {
             }
             
         }
+        .navigationViewStyle(.stack)
     }
 }
 
