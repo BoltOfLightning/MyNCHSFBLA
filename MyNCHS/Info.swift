@@ -44,7 +44,7 @@ struct Info: View {
                                         .font(Font.custom("Quicksand-Bold", size: 25))
                                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                                    Text("North Creek High School")
+                                    Text("" + (user?.profile?.email ?? "") + "")
                                         .font(Font.custom("Quicksand-Regular", size: 15))
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                 }
@@ -70,32 +70,21 @@ struct Info: View {
                     .offset(y: 30)
                     .padding(.bottom, 10)
                     
-                    Text("Email: " + (user?.profile?.email ?? "") + "")
-                        .font(Font.custom("Quicksand-Medium", size: 15))
-                        .padding()
-                        .frame(width: 360, height: 70)
-                        .background(.gray.opacity(0.1))
-                        .cornerRadius(20)
-                        .offset(y: 30)
-                        .padding(.bottom, 10)
-                    
                     VStack {
                         HStack {
                             Button {
                                 showWebView.toggle()
                             } label: {
                                 VStack {
-                                    Text("CLOSURES & DELAYS")
+                                    Text("CLOSURES\n &\n DELAYS")
                                         .font(Font.custom("Quicksand-Bold", size: 22))
-                                        .foregroundColor(Color("Color"))
+                                        .foregroundColor(.white)
                                         .multilineTextAlignment(.center)
                                     
                                 }
                                 .frame(width: 170, height: 170)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Color"), lineWidth: 5)
-                                )
+                                .background(Color("Color"))
+                                .cornerRadius(20)
                                 .padding(.trailing, 5)
                             }
                             .sheet(isPresented: $showWebView) {
@@ -151,17 +140,15 @@ struct Info: View {
                                 showWebView4.toggle()
                             } label: {
                                 VStack {
-                                    Text("SAFETY & SECURITY")
+                                    Text("SAFETY\n &\n SECURITY")
                                         .font(Font.custom("Quicksand-Bold", size: 22))
-                                        .foregroundColor(Color("Color"))
+                                        .foregroundColor(.white)
                                         .multilineTextAlignment(.center)
                                     
                                 }
                                 .frame(width: 170, height: 170)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Color"), lineWidth: 5)
-                                )
+                                .background(Color("Color"))
+                                .cornerRadius(20)
                                 .padding(.trailing, 5)
                             }
                             .sheet(isPresented: $showWebView4) {
@@ -172,19 +159,12 @@ struct Info: View {
                     .offset(y: 30)
                     .padding(.bottom, 10)
                     
-                    VStack {
-                        Text("Follow Us")
-                            .font(Font.custom("Quicksand-Bold", size: 15))
-                            .offset(y: -10)
-                            
-                        Logos()
-                            .offset(y: -10)
-                    }
-                    .frame(width: 330, height: 150)
-                    .padding()
-                    .background(.gray.opacity(0.1))
-                    .cornerRadius(10)
-                    .offset(y: 30)
+                    Logos()
+                        .frame(width: 330, height: 150)
+                        .padding()
+                        .background(.gray.opacity(0.1))
+                        .cornerRadius(10)
+                        .offset(y: 30)
                     
                     // Bug Report
                     Button {
@@ -254,62 +234,69 @@ struct Info_Previews: PreviewProvider {
 
 struct Logos: View {
     var body: some View {
-        HStack {
-            LinkButton(url: URL(string: "https://www.instagram.com/northcreekasb/?hl=en")!,
-                       imageName: "Instagram",
-                       imageWidth: 75,
-                       imageHeight: 75,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "Instagram",
-                       xOffset2: 0,
-                       yOffset2: 40,
-                       color: .black)
-            
-            LinkButton(url: URL(string: "https://twitter.com/northcreekhs")!,
-                       imageName: "Twitter",
-                       imageWidth: 75,
-                       imageHeight: 75,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "Twitter",
-                       xOffset2: 0,
-                       yOffset2: 40,
-                       color: .black)
-            
-            LinkButton(url: URL(string: "https://m.facebook.com/people/North-Creek-High-School/100068372418596/")!,
-                       imageName: "Facebook",
-                       imageWidth: 75,
-                       imageHeight: 75,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "Facebook",
-                       xOffset2: 0,
-                       yOffset2: 40,
-                       color: .black)
-            
-            LinkButton(url: URL(string: "https://www.youtube.com/@northcreekhighschoolasb7186")!,
-                       imageName: "Youtube",
-                       imageWidth: 75,
-                       imageHeight: 75,
-                       brightness: 0,
-                       blur: 0,
-                       text1: "",
-                       xOffset1: 0,
-                       yOffset1: -30,
-                       text2: "Youtube",
-                       xOffset2: 0,
-                       yOffset2: 40,
-                       color: .black)
+        VStack {
+            Text("Follow Us")
+                .font(Font.custom("Quicksand-Bold", size: 15))
+                .offset(y: -10)
+                
+            HStack {
+                LinkButton(url: URL(string: "https://www.instagram.com/northcreekasb/?hl=en")!,
+                           imageName: "Instagram",
+                           imageWidth: 75,
+                           imageHeight: 75,
+                           brightness: 0,
+                           blur: 0,
+                           text1: "",
+                           xOffset1: 0,
+                           yOffset1: -30,
+                           text2: "Instagram",
+                           xOffset2: 0,
+                           yOffset2: 40,
+                           color: .black)
+                
+                LinkButton(url: URL(string: "https://twitter.com/northcreekhs")!,
+                           imageName: "Twitter",
+                           imageWidth: 75,
+                           imageHeight: 75,
+                           brightness: 0,
+                           blur: 0,
+                           text1: "",
+                           xOffset1: 0,
+                           yOffset1: -30,
+                           text2: "Twitter",
+                           xOffset2: 0,
+                           yOffset2: 40,
+                           color: .black)
+                
+                LinkButton(url: URL(string: "https://m.facebook.com/people/North-Creek-High-School/100068372418596/")!,
+                           imageName: "Facebook",
+                           imageWidth: 75,
+                           imageHeight: 75,
+                           brightness: 0,
+                           blur: 0,
+                           text1: "",
+                           xOffset1: 0,
+                           yOffset1: -30,
+                           text2: "Facebook",
+                           xOffset2: 0,
+                           yOffset2: 40,
+                           color: .black)
+                
+                LinkButton(url: URL(string: "https://www.youtube.com/@northcreekhighschoolasb7186")!,
+                           imageName: "Youtube",
+                           imageWidth: 75,
+                           imageHeight: 75,
+                           brightness: 0,
+                           blur: 0,
+                           text1: "",
+                           xOffset1: 0,
+                           yOffset1: -30,
+                           text2: "Youtube",
+                           xOffset2: 0,
+                           yOffset2: 40,
+                           color: .black)
+            }
+                .offset(y: -10)
         }
     }
 }

@@ -21,8 +21,9 @@
 		277170F6286F984B00FC0440 /* AuthenticatioonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170F5286F984B00FC0440 /* AuthenticatioonViewModel.swift */; };
 		277170F8286F99B100FC0440 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170F7286F99B100FC0440 /* GoogleSignInButton.swift */; };
 		277170FA286F99FD00FC0440 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170F9286F99FD00FC0440 /* LoginView.swift */; };
+		27740032295F6DF600E9FEBB /* LinkNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27740031295F6DF600E9FEBB /* LinkNews.swift */; };
+		27740034295F6E0100E9FEBB /* LinkExploreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27740033295F6E0100E9FEBB /* LinkExploreTab.swift */; };
 		277AEB3A2910CE5100587277 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 277AEB372910CBB400587277 /* GoogleService-Info.plist */; };
-		27A8C82D29303B3F00E9C2E9 /* LinkText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8C82C29303B3F00E9C2E9 /* LinkText.swift */; };
 		27A8C82F29303D7D00E9C2E9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8C82E29303D7D00E9C2E9 /* News.swift */; };
 		27AC47E8295125BF007E0485 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47D7295125BE007E0485 /* Event.swift */; };
 		27AC47E9295125BF007E0485 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC47D8295125BE007E0485 /* EventStore.swift */; };
@@ -56,8 +57,9 @@
 		277170F5286F984B00FC0440 /* AuthenticatioonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatioonViewModel.swift; sourceTree = "<group>"; };
 		277170F7286F99B100FC0440 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		277170F9286F99FD00FC0440 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		27740031295F6DF600E9FEBB /* LinkNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkNews.swift; sourceTree = "<group>"; };
+		27740033295F6E0100E9FEBB /* LinkExploreTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExploreTab.swift; sourceTree = "<group>"; };
 		277AEB372910CBB400587277 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		27A8C82C29303B3F00E9C2E9 /* LinkText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkText.swift; sourceTree = "<group>"; };
 		27A8C82E29303D7D00E9C2E9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		27AC47D7295125BE007E0485 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		27AC47D8295125BE007E0485 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
@@ -139,7 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				27B140B5292716E700185A5A /* LinkButton.swift */,
-				27A8C82C29303B3F00E9C2E9 /* LinkText.swift */,
+				27740031295F6DF600E9FEBB /* LinkNews.swift */,
+				27740033295F6E0100E9FEBB /* LinkExploreTab.swift */,
 			);
 			path = LinkObjects;
 			sourceTree = "<group>";
@@ -325,12 +328,12 @@
 				27B2B1E6291C80350072A09D /* Messages.swift in Sources */,
 				27A8C82F29303D7D00E9C2E9 /* News.swift in Sources */,
 				277170DF286E763600FC0440 /* ContentView.swift in Sources */,
-				27A8C82D29303B3F00E9C2E9 /* LinkText.swift in Sources */,
 				27AC47F3295125BF007E0485 /* Date+Extension.swift in Sources */,
 				2731833929122778005082D9 /* Menu.swift in Sources */,
 				27318341291234E0005082D9 /* Info.swift in Sources */,
 				27AC47E8295125BF007E0485 /* Event.swift in Sources */,
 				277170F6286F984B00FC0440 /* AuthenticatioonViewModel.swift in Sources */,
+				27740034295F6E0100E9FEBB /* LinkExploreTab.swift in Sources */,
 				27AC47F92951297B007E0485 /* ListViewRow.swift in Sources */,
 				27AC47EC295125BF007E0485 /* EventFormType.swift in Sources */,
 				277170FA286F99FD00FC0440 /* LoginView.swift in Sources */,
@@ -339,6 +342,7 @@
 				27B140B22927155500185A5A /* WebView.swift in Sources */,
 				27AC47E9295125BF007E0485 /* EventStore.swift in Sources */,
 				277170DD286E763600FC0440 /* MyNCHSApp.swift in Sources */,
+				27740032295F6DF600E9FEBB /* LinkNews.swift in Sources */,
 				27B2B1E4291C7FFF0072A09D /* Calender.swift in Sources */,
 				27AC47EB295125BF007E0485 /* EventFormView.swift in Sources */,
 				27AC47EA295125BF007E0485 /* EventFormViewModel.swift in Sources */,
