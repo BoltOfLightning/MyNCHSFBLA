@@ -4,7 +4,7 @@ Made for FBLA Mobile Application Development
 By Sai Lalith Kanumuri, Bryan Nie, and Rithin Karthik
 For iPhone and iPad
 
-##Abstract
+## Abstract
 MyNCHS is an app for the North Creek High School Community. It holds many different features to help all users extract information on subjects related to our school. The app features many different features, like integrated social media, calendar scheduling, and more, which are either essential features or requirements for FBLA Mobile Application Development submissions. Along with the necessities for an information and productivity app, MyNCHS also provides in-built messaging, to communicate with North Creek personnel. The entirety of the app was built with Xcode, SwiftUI, UIkit, and more platforms, for iPhone and iPad, allowing for a streamlined, and stable app.
 
 
@@ -70,7 +70,7 @@ These images are credited in our [slideshow.](https://www.canva.com/design/DAFVO
 
 The Google logo is used in compliance with [Googles trademark usage guidelines.](https://www.google.com/permissions/trademark/rules.html)
 
-###Trademarks
+### Trademarks
 Firebase platform is a registered trademark of Google LLC.
 iOS is a registered trademark of Cisco in the U.S. and other countries.
 iPadOS, Swift, SwiftUI, and Xcode are all registered trademarks of Apple Inc.
