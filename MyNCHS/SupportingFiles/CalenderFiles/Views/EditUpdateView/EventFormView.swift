@@ -1,3 +1,10 @@
+//
+//  EventFormView.swift
+//  MyNCHS
+//
+//  Created by SaiLalith Kanumuri on 12/17/22.
+//
+
 import SwiftUI
 
 struct EventFormView: View {
@@ -5,6 +12,8 @@ struct EventFormView: View {
     @StateObject var viewModel: EventFormViewModel
     @Environment(\.dismiss) var dismiss
     @FocusState private var focus: Bool?
+    
+    let notify = NotificationHandler()
     
     var body: some View {
         if #available(iOS 16.0, *) {
@@ -33,12 +42,22 @@ struct EventFormView: View {
                                                       date: viewModel.date,
                                                       note: viewModel.note)
                                     eventStore.update(event)
+                                    
+                                    notify.sendNotification(date: viewModel.date,
+                                                            type: "date",
+                                                            title: viewModel.note,
+                                                            body: viewModel.eventType.rawValue.capitalizingFirstLetter())
                                 } else {
                                     // create new event
                                     let newEvent = Event(eventType: viewModel.eventType,
                                                          date: viewModel.date,
                                                          note: viewModel.note)
                                     eventStore.add(newEvent)
+                                    
+                                    notify.sendNotification(date: viewModel.date,
+                                                            type: "date",
+                                                            title: viewModel.note,
+                                                            body: viewModel.eventType.rawValue.capitalizingFirstLetter())
                                 }
                                 dismiss()
                             } label: {

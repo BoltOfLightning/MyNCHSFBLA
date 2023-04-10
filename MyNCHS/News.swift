@@ -1,6 +1,6 @@
 //
 //  News.swift
-//  GoogleSignInPage
+//  MyNCHS
 //
 //  Created by SaiLalith Kanumuri on 11/24/22.
 //

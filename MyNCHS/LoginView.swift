@@ -1,8 +1,8 @@
 //
 //  LoginView.swift
-//  GoogleSignInPage
+//  MyNCHS
 //
-//  Created by SaiLalith Kanumuri on 7/1/22.
+//  Created by SaiLalith Kanumuri on 10/28/22.
 //
 
 import SwiftUI

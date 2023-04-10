@@ -1,3 +1,10 @@
+//
+//  EventFormViewModel.swift
+//  MyNCHS
+//
+//  Created by SaiLalith Kanumuri on 12/17/22.
+//
+
 import SwiftUI
 
 class EventFormViewModel: ObservableObject {

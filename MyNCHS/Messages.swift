@@ -1,6 +1,6 @@
 //
 //  Messages.swift
-//  GoogleSignInPage
+//  MyNCHS
 //
 //  Created by SaiLalith Kanumuri on 11/9/22.
 //
@@ -32,7 +32,6 @@ struct Messages: View {
                             .aspectRatio(contentMode: .fit)
                             .clipShape(Circle())
                             .frame(width: 300, height: 300)
-
                     } else {
                         Image("NorthCreek1")
                             .resizable()

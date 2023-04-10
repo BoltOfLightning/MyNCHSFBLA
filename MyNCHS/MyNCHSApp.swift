@@ -1,8 +1,8 @@
 //
-//  GoogleSignInPageApp.swift
-//  GoogleSignInPage
+//  MyNCHS.swift
+//  MyNCHS
 //
-//  Created by SaiLalith Kanumuri on 6/30/22.
+//  Updated by SaiLalith Kanumuri on 10/21/22.
 //
 
 import SwiftUI

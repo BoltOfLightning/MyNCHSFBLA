@@ -1,6 +1,6 @@
 //
 //  Info.swift
-//  GoogleSignInPage
+//  MyNCHS
 //
 //  Created by SaiLalith Kanumuri on 11/1/22.
 //
@@ -17,6 +17,8 @@ struct Info: View {
     @State var showWebView3 = false
     @State var showWebView4 = false
     @State var showWebView5 = false
+    
+    let notify = NotificationHandler()
     
     var body: some View {
         NavigationView {
@@ -43,7 +45,7 @@ struct Info: View {
                                     Text("" + (user?.profile?.name ?? "") + "")
                                         .font(Font.custom("Quicksand-Bold", size: 25))
                                         .frame(maxWidth: .infinity, alignment: .leading)
-
+                                    
                                     Text("" + (user?.profile?.email ?? "") + "")
                                         .font(Font.custom("Quicksand-Regular", size: 15))
                                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -70,142 +72,105 @@ struct Info: View {
                     .offset(y: 30)
                     .padding(.bottom, 10)
                     
-                    VStack {
-                        HStack {
-                            Button {
-                                showWebView.toggle()
-                            } label: {
-                                VStack {
-                                    Text("CLOSURES\n &\n DELAYS")
-                                        .font(Font.custom("Quicksand-Bold", size: 22))
-                                        .foregroundColor(.white)
-                                        .multilineTextAlignment(.center)
-                                    
-                                }
-                                .frame(width: 170, height: 170)
-                                .background(Color("Color"))
-                                .cornerRadius(20)
-                                .padding(.trailing, 5)
-                            }
-                            .sheet(isPresented: $showWebView) {
-                                WebView(url: URL(string: "https://northcreek.nsd.org/our-school/weather-emergency-information")!)
-                            }
-                            
-                            Button {
-                                showWebView2.toggle()
-                            } label: {
-                                VStack {
-                                    Text("ENROLLMENT")
-                                        .font(Font.custom("Quicksand-Bold", size: 22))
-                                        .foregroundColor(Color("Color"))
-                                        .multilineTextAlignment(.center)
-                                    
-                                }
-                                .frame(width: 170, height: 170)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Color"), lineWidth: 5)
-                                )
-                                .padding(.trailing, 5)
-                            }
-                            .sheet(isPresented: $showWebView2) {
-                                WebView(url: URL(string: "https://northcreek.nsd.org/our-school/enrollment")!)
-                            }
-                        }
-                        .padding(.bottom, 5)
-                        
-                        HStack {
-                            Button {
-                                showWebView3.toggle()
-                            } label: {
-                                VStack {
-                                    Text("SCHEDULE")
-                                        .font(Font.custom("Quicksand-Bold", size: 22))
-                                        .foregroundColor(Color("Color"))
-                                        .multilineTextAlignment(.center)
-                                    
-                                }
-                                .frame(width: 170, height: 170)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Color"), lineWidth: 5)
-                                )
-                                .padding(.trailing, 5)
-                            }
-                            .sheet(isPresented: $showWebView3) {
-                                WebView(url: URL(string: "https://northcreek.nsd.org/our-school/schedule")!)
-                            }
-                            
-                            Button {
-                                showWebView4.toggle()
-                            } label: {
-                                VStack {
-                                    Text("SAFETY\n &\n SECURITY")
-                                        .font(Font.custom("Quicksand-Bold", size: 22))
-                                        .foregroundColor(.white)
-                                        .multilineTextAlignment(.center)
-                                    
-                                }
-                                .frame(width: 170, height: 170)
-                                .background(Color("Color"))
-                                .cornerRadius(20)
-                                .padding(.trailing, 5)
-                            }
-                            .sheet(isPresented: $showWebView4) {
-                                WebView(url: URL(string: "https://northcreek.nsd.org/our-school/safety-and-security")!)
-                            }
-                        }
+                    Button("Notification Permssions") {
+                        notify.askPermission()
                     }
-                    .offset(y: 30)
-                    .padding(.bottom, 10)
+                    .foregroundColor(.white)
+                    .font(Font.custom("Quicksand-Regular", size: 20))
+                    .padding()
+                    .frame(width: 355, height: 50)
+                    .background(Color("Color"))
+                    .cornerRadius(20)
+                    .offset(y: 23)
                     
-                    Logos()
-                        .frame(width: 330, height: 150)
-                        .padding()
-                        .background(.gray.opacity(0.1))
-                        .cornerRadius(10)
-                        .offset(y: 30)
-                    
-                    // Bug Report
-                    Button {
-                        showWebView5.toggle()
-                    } label: {
-                        VStack {
-                            Text("Feedback or Report Bugs Here!")
-                                .font(Font.custom("Quicksand-Bold", size: 30))
-                                .foregroundColor(Color("Color"))
-                                .multilineTextAlignment(.center)
-                            
-                        }
-                        .frame(width: 350, height: 100)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color("Color"), lineWidth: 5)
-                        )
-                    }
-                    .sheet(isPresented: $showWebView5) {
-                        WebView(url: URL(string: "https://forms.gle/BSK75wedtFHCZpFi7")!)
-                    }
-                    .offset(y: 40)
-                    
-                    Image("HorizontalLogo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(20)
-                        .frame(width: 350, height: 225)
-                        .offset(y: 20)
-                        
-                    Text("Version 2.0")
-                        .font(Font.custom("Quicksand-Bold", size: 20))
-                        .padding()
-                        .offset(y: -20)
                 }
-
+                
+                // Row of buttons
+                VStack {
+                    LinkInfoTab(url: URL(string: "https://northcreek.nsd.org/our-school/weather-emergency-information")!,
+                                text1: "Closures & Delays",
+                                color: .white,
+                                color2: Color("Color"))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color("Color"), lineWidth: 5)
+                    )
+                    .padding(.trailing, 15)
+                    
+                    LinkInfoTab(url: URL(string: "https://northcreek.nsd.org/our-school/enrollment")!,
+                                text1: "Enrollment",
+                                color: Color("Color"),
+                                color2: .white)
+                    .padding(.trailing, 15)
+                    
+                    LinkInfoTab(url: URL(string: "https://northcreek.nsd.org/our-school/schedule")!,
+                                text1: "Schedule",
+                                color: .white,
+                                color2: Color("Color"))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color("Color"), lineWidth: 5)
+                    )
+                    .padding(.trailing, 15)
+                    
+                    LinkInfoTab(url: URL(string: "https://northcreek.nsd.org/our-school/safety-and-security")!,
+                                text1: "Safety & Security",
+                                color: Color("Color"),
+                                color2: .white)
+                    .padding(.trailing, 15)
+                }
+                .offset(x: 5, y: 23)
+                
+                
+                Logos()
+                    .frame(width: 330, height: 150)
+                    .padding()
+                    .background(.gray.opacity(0.1))
+                    .cornerRadius(10)
+                    .offset(y: 30)
+                
+                // Bug Report
+                Button {
+                    showWebView5.toggle()
+                } label: {
+                    VStack {
+                        Text("Feedback or Report Bugs Here!")
+                            .font(Font.custom("Quicksand-Bold", size: 30))
+                            .foregroundColor(Color("Color"))
+                            .multilineTextAlignment(.center)
+                        
+                    }
+                    .frame(width: 350, height: 100)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color("Color"), lineWidth: 5)
+                    )
+                }
+                .sheet(isPresented: $showWebView5) {
+                    WebView(url: URL(string: "https://forms.gle/BSK75wedtFHCZpFi7")!)
+                }
+                .offset(y: 40)
+                
+                Image("HorizontalLogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(20)
+                    .frame(width: 350, height: 225)
+                    .offset(y: 20)
+                
+                Text("Version 2.0")
+                    .font(Font.custom("Quicksand-Bold", size: 20))
+                    .padding()
+                    .offset(y: -20)
             }
+            
+            
         }
         .navigationViewStyle(.stack)
     }
+    
 }
+
 
 struct NetworkImage: View {
     let url: URL?
@@ -238,7 +203,7 @@ struct Logos: View {
             Text("Follow Us")
                 .font(Font.custom("Quicksand-Bold", size: 15))
                 .offset(y: -10)
-                
+            
             HStack {
                 LinkButton(url: URL(string: "https://www.instagram.com/northcreekasb/?hl=en")!,
                            imageName: "Instagram",
@@ -296,7 +261,7 @@ struct Logos: View {
                            yOffset2: 40,
                            color: .black)
             }
-                .offset(y: -10)
+            .offset(y: -10)
         }
     }
 }

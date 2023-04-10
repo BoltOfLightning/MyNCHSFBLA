@@ -1,6 +1,6 @@
 //
 //  ImagePickerView.swift
-//  GoogleSignInPage
+//  MyNCHS
 //
 //  Created by SaiLalith Kanumuri on 12/15/22.
 //
@@ -30,7 +30,6 @@ struct ImagePickerView: UIViewControllerRepresentable {
         return Coordinator(picker: self)
     }
 }
-
 
 class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     var picker: ImagePickerView

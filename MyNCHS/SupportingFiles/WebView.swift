@@ -1,6 +1,6 @@
 //
 //  WebView.swift
-//  GoogleSignInPage
+//  MyNCHS
 //
 //  Created by SaiLalith Kanumuri on 11/17/22.
 //
