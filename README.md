@@ -52,21 +52,20 @@ MyNCHS does not handle any unnecessary data, nor does it share any of that data 
 	- End to end encryption
 
 ## Acknowledgments
-- 
-- 
-- 
-- 
 We used many different sources to code and learn. Thanks to the individuals or groups below for making us able to code this app.
 
-We thank our FBLA advisor, Mr.Barnes, for being well versed and supportive to all of us
+We thank our FBLA advisor, Mr.Barnes, for being well versed and supportive to all of us.
 
 We thank FBLA-PBL for giving us an amazing learning oppurtunity, and for conducting this Mobile Application Development competition.
 
 ## Copyright
 Any unoriginal images used in our project are protected under [Fair Use and Other Educational Uses.](https://www.lib.uchicago.edu/copyrightinfo/fairuse.html)
 
-These images are credited in our [slideshow.](https://www.canva.com/design/DAFVOiiFjH8/2DONf4KCRR6Jeu6tRvlXSw/view?utm_content=DAFVOiiFjH8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
+These images are credited in our 3 works cited pages.
+[Images Works Cited](https://docs.google.com/document/d/1gb0S_kpVNI2wj3yfwLtIDacHqMnh-fjf/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true)
+[Libraries Works Cited](https://docs.google.com/document/d/1VhGBdrG-mcTlNvxbQyq2tXTVA--JAKM6/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true)
+[Resources Works Cited](https://docs.google.com/document/d/182PEfug-UBgXZYwSAnSAetnL3N1sTuj-/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true)
+[Works Cited Folder](https://drive.google.com/drive/folders/1p-5PA3dV4sLJx7Tha5dkODcOeL9XaEXU?usp=sharing)
 The Google logo is used in compliance with [Googles trademark usage guidelines.](https://www.google.com/permissions/trademark/rules.html)
 
 ### Trademarks
