@@ -8,6 +8,7 @@
 import SwiftUI
 import GoogleSignIn
 
+// Displays the calender with all the data from the events
 struct EventsCalendarView: View {
     @EnvironmentObject var eventStore: EventStore
     @State private var dateSelected: DateComponents?
@@ -32,6 +33,7 @@ struct EventsCalendarView: View {
                             
                             Spacer()
                             
+                            // Allows access to add new events
                             Button {
                                 formType = .new
                             } label: {
@@ -42,6 +44,7 @@ struct EventsCalendarView: View {
                             
                             Spacer()
                             
+                            // Profile image of the user from Google Sign In
                             NetworkImage(url: user?.profile?.imageURL(withDimension: 200))
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 50, height: 50, alignment: .center)
@@ -50,12 +53,14 @@ struct EventsCalendarView: View {
                         }
                     }
 
-                    Text("YOUR CALENDAR, " + (user?.profile?.name ?? "") + "")
+                    // Profile name of the user from Google Sign In
+                    Text("Your Calendar, " + (user?.profile?.name ?? "") + "")
                         .font(Font.custom("Quicksand-Regular", size: 15))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .offset(x: 20, y: 30)
                         .padding(.bottom, 25)
                     
+                    // Runs CalendarView
                     CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture),
                                  eventStore: eventStore,
                                  dateSelected: $dateSelected,

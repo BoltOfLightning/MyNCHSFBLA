@@ -11,6 +11,7 @@ struct ListViewRow: View {
     let event: Event
     @Binding var formType: EventFormType?
     
+    // This is displays each individual event
     var body: some View {
         HStack {
             VStack(alignment: .leading) {

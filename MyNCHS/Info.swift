@@ -9,19 +9,21 @@ import SwiftUI
 import GoogleSignIn
 
 struct Info: View {
+    // Authenticates the user to enter the app
     @EnvironmentObject var viewModel: AuthenticationViewModel
+    
+    // Current instace of the user on the app
     private let user = GIDSignIn.sharedInstance.currentUser
     
+    // Allows external links to pop up in the app
     @State var showWebView = false
-    @State var showWebView2 = false
-    @State var showWebView3 = false
-    @State var showWebView4 = false
-    @State var showWebView5 = false
     
+    // Allows app to send notifications
     let notify = NotificationHandler()
     
     var body: some View {
         NavigationView {
+            // Displays info page onto the screen when clicked on the menu
             ScrollView {
                 VStack {
                     Text("Info")
@@ -36,16 +38,19 @@ struct Info: View {
                     VStack {
                         VStack {
                             HStack {
+                                // Collects user profile image from Google Sign In
                                 NetworkImage(url: user?.profile?.imageURL(withDimension: 200))
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(50)
                                 
                                 VStack {
+                                    // Collects user profile name from Google Sign In
                                     Text("" + (user?.profile?.name ?? "") + "")
                                         .font(Font.custom("Quicksand-Bold", size: 25))
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                     
+                                    // Collects user profile email from Google Sign In
                                     Text("" + (user?.profile?.email ?? "") + "")
                                         .font(Font.custom("Quicksand-Regular", size: 15))
                                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -54,6 +59,7 @@ struct Info: View {
                         }
                         .offset(x: 25, y: 10)
                         
+                        // When presses, it will sign out the user and will go back to the login page
                         Button(action: viewModel.signOut) {
                             Text("SIGN OUT")
                                 .foregroundColor(.white)
@@ -72,6 +78,7 @@ struct Info: View {
                     .offset(y: 30)
                     .padding(.bottom, 10)
                     
+                    // Asks user for permission to send notifications for the calendar
                     Button("Notification Permssions") {
                         notify.askPermission()
                     }
@@ -85,7 +92,7 @@ struct Info: View {
                     
                 }
                 
-                // Row of buttons
+                // Row of buttons with school information
                 VStack {
                     LinkInfoTab(url: URL(string: "https://northcreek.nsd.org/our-school/weather-emergency-information")!,
                                 text1: "Closures & Delays",
@@ -121,7 +128,7 @@ struct Info: View {
                 }
                 .offset(x: 5, y: 23)
                 
-                
+                // Social media links
                 Logos()
                     .frame(width: 330, height: 150)
                     .padding()
@@ -131,7 +138,7 @@ struct Info: View {
                 
                 // Bug Report
                 Button {
-                    showWebView5.toggle()
+                    showWebView.toggle()
                 } label: {
                     VStack {
                         Text("Feedback or Report Bugs Here!")
@@ -146,7 +153,7 @@ struct Info: View {
                             .stroke(Color("Color"), lineWidth: 5)
                     )
                 }
-                .sheet(isPresented: $showWebView5) {
+                .sheet(isPresented: $showWebView) {
                     WebView(url: URL(string: "https://forms.gle/BSK75wedtFHCZpFi7")!)
                 }
                 .offset(y: 40)
@@ -171,7 +178,7 @@ struct Info: View {
     
 }
 
-
+// Gets the profile image from the user
 struct NetworkImage: View {
     let url: URL?
     
@@ -197,6 +204,7 @@ struct Info_Previews: PreviewProvider {
     }
 }
 
+// Social media links code
 struct Logos: View {
     var body: some View {
         VStack {
@@ -205,6 +213,7 @@ struct Logos: View {
                 .offset(y: -10)
             
             HStack {
+                // Instagram button
                 LinkButton(url: URL(string: "https://www.instagram.com/northcreekasb/?hl=en")!,
                            imageName: "Instagram",
                            imageWidth: 75,
@@ -219,6 +228,7 @@ struct Logos: View {
                            yOffset2: 40,
                            color: .black)
                 
+                // Twitter Button
                 LinkButton(url: URL(string: "https://twitter.com/northcreekhs")!,
                            imageName: "Twitter",
                            imageWidth: 75,
@@ -233,6 +243,7 @@ struct Logos: View {
                            yOffset2: 40,
                            color: .black)
                 
+                // Facebook button
                 LinkButton(url: URL(string: "https://m.facebook.com/people/North-Creek-High-School/100068372418596/")!,
                            imageName: "Facebook",
                            imageWidth: 75,
@@ -247,6 +258,7 @@ struct Logos: View {
                            yOffset2: 40,
                            color: .black)
                 
+                // Youtube button
                 LinkButton(url: URL(string: "https://www.youtube.com/@northcreekhighschoolasb7186")!,
                            imageName: "Youtube",
                            imageWidth: 75,

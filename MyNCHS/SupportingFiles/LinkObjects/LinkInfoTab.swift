@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// Used to make the school info buttons
+// This is an class that can be instanciated to an object that takes paramters
+// Exists to use less lines of repetitive code to perform the same task
 struct LinkInfoTab: View {
     @State var showWebView = false
     

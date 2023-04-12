@@ -9,10 +9,12 @@ import SwiftUI
 import GoogleSignIn
 
 struct News: View {
+    // Current instance of the user
     private let user = GIDSignIn.sharedInstance.currentUser
     
     var body: some View {
         NavigationView {
+            // Displays news info
             ScrollView {
                 VStack {
                     HStack {
@@ -27,6 +29,7 @@ struct News: View {
                         
                         Spacer()
                         
+                        // Gets user's profile image from google
                         NetworkImage(url: user?.profile?.imageURL(withDimension: 200))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50, alignment: .center)
@@ -34,7 +37,8 @@ struct News: View {
                             .offset(x: -4.5, y: 4.5)
                     }
 
-                    Text("YOUR NEWSLETTERS, " + (user?.profile?.name ?? "") + "")
+                    // Gtes user's profile name from google
+                    Text("Your Newsletters, " + (user?.profile?.name ?? "") + "")
                         .font(Font.custom("Quicksand-Regular", size: 15))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .offset(x: 4, y: 15)
@@ -94,7 +98,7 @@ struct News: View {
                     .offset(x: 20, y: 15)
                     .padding(.bottom, 5)
                     
-                    
+                    // Social media links
                     Logos()
                         .frame(width: 330, height: 150)
                         .padding()

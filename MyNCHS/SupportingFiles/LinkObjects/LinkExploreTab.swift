@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// Used to make the explore tab buttons
+// This is an class that can be instanciated to an object that takes paramters
+// Exists to use less lines of repetitive code to perform the same task
 struct LinkExploreTab: View {
     @State var showWebView = false
     

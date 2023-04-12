@@ -14,6 +14,7 @@ struct CalendarView: UIViewRepresentable {
     @Binding var dateSelected: DateComponents?
     @Binding var displayEvents: Bool
     
+    // Makes the view
     func makeUIView(context: Context) -> some UICalendarView {
         let view = UICalendarView()
         view.delegate = context.coordinator
@@ -28,6 +29,7 @@ struct CalendarView: UIViewRepresentable {
         Coordinator(parent: self, eventStore: _eventStore)
     }
     
+    // Updates the display if there is any change
     func updateUIView(_ uiView: UIViewType, context: Context) {
         if let changedEvent = eventStore.changedEvent {
             uiView.reloadDecorations(forDateComponents: [changedEvent.dateComponents], animated: true)
@@ -50,6 +52,7 @@ struct CalendarView: UIViewRepresentable {
         }
         
         @MainActor
+        // Looks at all of the events
         func calendarView(_ calendarView: UICalendarView,
                           decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
             let foundEvents = eventStore.events
@@ -69,6 +72,7 @@ struct CalendarView: UIViewRepresentable {
             }
         }
         
+        // If found events, it will toogle the event
         func dateSelection(_ selection: UICalendarSelectionSingleDate,
                            didSelectDate dateComponents: DateComponents?) {
             parent.dateSelected = dateComponents

@@ -9,7 +9,9 @@ import SwiftUI
 import GoogleSignIn
 
 struct Home: View {
+    // Current instance of the user
     private let user = GIDSignIn.sharedInstance.currentUser
+    
     @State var showWebView = false
     @State var showWebView2 = false
     @State var showWebView3 = false
@@ -17,6 +19,7 @@ struct Home: View {
     
     var body: some View {
         NavigationView {
+            // Page layout
             ScrollView {
                 VStack {
                     HStack {
@@ -31,6 +34,7 @@ struct Home: View {
                         
                         Spacer()
                         
+                        // Profile picture of the user, got from Google
                         NetworkImage(url: user?.profile?.imageURL(withDimension: 200))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50, alignment: .center)
@@ -39,11 +43,13 @@ struct Home: View {
                     }
                 }
 
-                Text("GOOD MORNING, " + (user?.profile?.name ?? "") + "")
+                // Profile name of the user, got from Google
+                Text("Welcome to the Jungle, " + (user?.profile?.name ?? "") + "")
                     .font(Font.custom("Quicksand-Regular", size: 15))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .offset(x: 20, y: 30)
                 
+                // All the info drawn on the screen
                 VStack {
                     HStack {
                         VStack {
@@ -56,6 +62,7 @@ struct Home: View {
                             }
                             .offset(y: 60)
                             
+                            // Gets the date and displays it
                             Text(Date.now, format: .dateTime.hour().minute())
                                 .font(Font.custom("Quicksand-Medium", size: 35))
                                 .offset(y: 60)
@@ -65,7 +72,7 @@ struct Home: View {
                                 .padding(.bottom, 20)
                                 .offset(y: 60)
                             
-                            Text("Semester 1")
+                            Text("Semester 2")
                                 .font(Font.custom("Quicksand-Bold", size: 10))
                                 .offset(y: 60)
                             
@@ -100,6 +107,7 @@ struct Home: View {
                     }
                     .padding(.bottom, 5)
                     
+                    // Newsletters
                     HStack {
                         Button {
                             showWebView.toggle()
@@ -168,6 +176,7 @@ struct Home: View {
                             WebView(url: URL(string: "https://northcreek.nsd.org/our-school/school-news")!)
                         }
                         
+                        // Student Info
                         VStack {
                             Text("STUDENT INFO")
                                 .font(Font.custom("Quicksand-Bold", size: 22))
@@ -240,7 +249,7 @@ struct Home: View {
                     }
                     .padding(.bottom, 5)
                     
-                    
+                    // Teacher Info
                     HStack {
                         VStack {
                             Text("TEACHER INFO")
@@ -306,7 +315,6 @@ struct Home: View {
                             .sheet(isPresented: $showWebView4) {
                                 WebView(url: URL(string: "https://northcreek.nsd.org/our-school/school-directory")!)
                             }
-                            
                             
                         }
                         .frame(width: 170, height: 170)

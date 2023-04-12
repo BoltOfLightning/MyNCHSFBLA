@@ -8,7 +8,9 @@
 import SwiftUI
 import UserNotifications
 
+// Allows access to send notificatios
 class NotificationHandler {
+    // Asks permission to the user to send notifications
     func askPermission() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
@@ -19,6 +21,7 @@ class NotificationHandler {
         }
     }
     
+    // Sends the notification
     func sendNotification(date: Date, type: String, timeInterval: Double = 5, title: String, body: String) {
         var trigger: UNNotificationTrigger?
         

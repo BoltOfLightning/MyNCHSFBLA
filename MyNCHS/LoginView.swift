@@ -11,6 +11,7 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
 
     var body: some View {
+        // Displays the background of the Login page
         ZStack {
             Color("Color")
                 .opacity(0.8)
@@ -46,6 +47,8 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .offset(y: -200)
                 
+                // This is the Google sign in button on the page
+                // It uses the viewModel to authenticate sign in
                 Button {
                     viewModel.signIn()
                 } label: {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// To make a new event, it runs this
 struct EventFormView: View {
     @EnvironmentObject var eventStore: EventStore
     @StateObject var viewModel: EventFormViewModel

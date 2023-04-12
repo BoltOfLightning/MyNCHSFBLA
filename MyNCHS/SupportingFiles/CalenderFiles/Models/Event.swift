@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// This is each individual event
 struct Event: Identifiable {
     enum EventType: String, Identifiable, CaseIterable {
         case school, home, social, sport, unspecified
@@ -14,6 +15,7 @@ struct Event: Identifiable {
             self.rawValue
         }
 
+        // All the types of events
         var icon: String {
             switch self {
             case .school:
@@ -37,6 +39,7 @@ struct Event: Identifiable {
     //let dateFormatter = DateFormatter()
     //dateFormatter.dateFormat = "dd/MM/yyyy"
     
+    // Defines what a date should be
     var dateComponents: DateComponents {
         var dateComponents = Calendar.current.dateComponents(
             [.month,

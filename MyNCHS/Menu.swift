@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+// This will always keep a look out for user actions like pressing on the menu
 struct Menu: View {
+    // What button on the menu the user pressed on
     @State var selection = 0
     
     var body: some View {
         TabView(selection: $selection) {
+            // When clicked on this button, it will go to the home page
             Home().navigationTitle("x")
                 .tabItem {
                     if selection == 0 {
@@ -20,7 +23,8 @@ struct Menu: View {
                         Image(systemName: "house")
                     }
                 }.tag(0)
-            
+
+            // When clicked on this button, it will go to the news page
             News().navigationTitle("x")
                 .tabItem {
                     if selection == 1 {
@@ -29,7 +33,8 @@ struct Menu: View {
                         Image(systemName: "newspaper")
                     }
                 }.tag(1)
-            
+
+            // When clicked on this button, it will go to the calendar
             Calender().navigationTitle("x")
                 .tabItem {
                     if selection == 1 {
@@ -38,7 +43,8 @@ struct Menu: View {
                         Image(systemName: "calendar")
                     }
                 }.tag(2)
-            
+
+            // When clicked, it will launch gmail directly from the app
             Messages().navigationTitle("x")
                 .tabItem {
                     if selection == 3 {
@@ -47,7 +53,8 @@ struct Menu: View {
                         Image(systemName: "message")
                     }
                 }.tag(3)
-            
+
+            // When clicked on this button, it will go to the info page
             Info().navigationTitle("x")
                 .tabItem {
                     if selection == 4 {
@@ -66,4 +73,3 @@ struct Menu_Previews: PreviewProvider {
         Menu()
     }
 }
-

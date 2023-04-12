@@ -16,6 +16,7 @@ struct DaysEventsListView: View {
         if #available(iOS 16.0, *) {
             NavigationStack {
                 Group {
+                    // If an event is selected, based on the user request, it will delete an event
                     if let dateSelected {
                         let foundEvents = eventStore.events
                             .filter {$0.date.startOfDay == dateSelected.date!.startOfDay}
