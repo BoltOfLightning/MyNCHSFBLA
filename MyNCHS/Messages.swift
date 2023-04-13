@@ -9,16 +9,10 @@ import SwiftUI
 
 struct Messages: View {
     
-    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    @State private var selectedImage: UIImage?
-    @State private var isImagePickerDisplay = false
-    
-    @State var items : [Any] = []
-    @State var sheet = false
-    
-    var body: some View {
-        Text("messages")
-    }
+    @StateObject var model = WebViewModel()
+        var body: some View {
+            WebView2(webView: model.webView)
+        }
 }
 
 struct Messages_Previews: PreviewProvider {

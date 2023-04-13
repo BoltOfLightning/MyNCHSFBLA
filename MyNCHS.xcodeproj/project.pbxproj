@@ -12,6 +12,7 @@
 		27318341291234E0005082D9 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27318340291234E0005082D9 /* Info.swift */; };
 		276F8D8029E47DDF00BB4D69 /* LinkInfoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F8D7F29E47DDF00BB4D69 /* LinkInfoTab.swift */; };
 		276F8D8229E71E6100BB4D69 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F8D8129E71E6100BB4D69 /* LinkButton.swift */; };
+		276F8D8629E7302100BB4D69 /* WebView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F8D8529E7302100BB4D69 /* WebView2.swift */; };
 		277170DD286E763600FC0440 /* MyNCHSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170DC286E763600FC0440 /* MyNCHSApp.swift */; };
 		277170DF286E763600FC0440 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170DE286E763600FC0440 /* ContentView.swift */; };
 		277170E1286E763800FC0440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277170E0286E763800FC0440 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		27318340291234E0005082D9 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		276F8D7F29E47DDF00BB4D69 /* LinkInfoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInfoTab.swift; sourceTree = "<group>"; };
 		276F8D8129E71E6100BB4D69 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
+		276F8D8529E7302100BB4D69 /* WebView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView2.swift; sourceTree = "<group>"; };
 		277170D9286E763600FC0440 /* MyNCHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNCHS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277170DC286E763600FC0440 /* MyNCHSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNCHSApp.swift; sourceTree = "<group>"; };
 		277170DE286E763600FC0440 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		276F8D8829E731AB00BB4D69 /* WebViews */ = {
+			isa = PBXGroup;
+			children = (
+				27B140B12927155500185A5A /* WebView.swift */,
+				276F8D8529E7302100BB4D69 /* WebView2.swift */,
+			);
+			path = WebViews;
+			sourceTree = "<group>";
+		};
 		277170D0286E763600FC0440 = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				27AC47FD295AA25D007E0485 /* Fonts */,
-				27B140B12927155500185A5A /* WebView.swift */,
+				276F8D8829E731AB00BB4D69 /* WebViews */,
 				27A8C830293041C700E9C2E9 /* LinkObjects */,
 				27AC47932950FE8C007E0485 /* CalenderFiles */,
 				27AC47952950FEE3007E0485 /* GoogleSignin */,
@@ -355,6 +366,7 @@
 				27AC47E9295125BF007E0485 /* EventStore.swift in Sources */,
 				277170DD286E763600FC0440 /* MyNCHSApp.swift in Sources */,
 				27740032295F6DF600E9FEBB /* LinkNews.swift in Sources */,
+				276F8D8629E7302100BB4D69 /* WebView2.swift in Sources */,
 				27B2B1E4291C7FFF0072A09D /* Calender.swift in Sources */,
 				27AC47EB295125BF007E0485 /* EventFormView.swift in Sources */,
 				27AC47EA295125BF007E0485 /* EventFormViewModel.swift in Sources */,

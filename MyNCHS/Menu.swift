@@ -48,9 +48,9 @@ struct Menu: View {
             Messages().navigationTitle("x")
                 .tabItem {
                     if selection == 3 {
-                        Image(systemName: "message.fill")
+                        Image(systemName: "envelope.open.fill")
                     } else {
-                        Image(systemName: "message")
+                        Image(systemName: "envelope")
                     }
                 }.tag(3)
 
