@@ -44,59 +44,35 @@ struct News: View {
                         .offset(x: 4, y: 15)
                     
                     // Main news
-                    LinkNews(url: URL(string: "https://storage.googleapis.com/pt04-2/messages/attachments/f190f12f04adb6bb85fe8ba1d2f2c0a5/Family_Bulletin_16_-_December_11%252C_2022.pdf")!,
+                    LinkNews(url: URL(string: "https://www.parentsquare.com/schools/18569/feeds")!,
                              text1: "News1",
-                             text2: "Jaguar Family\nBulletin #16",
-                             padding: -12,
-                             text3: "December",
+                             text2: "ParentSquare\nBulletin #29",
+                             padding: -15,
+                             text3: "April",
                              text4: "Monthly\nNewsletter")
                         .offset(x: -5, y: 10)
                     
                     LinkNews(url: URL(string: "https://arbiterlive.com/Teams?entityId=45371")!,
                              text1: "News2",
-                             text2: "Basketball\nTournament\nDates",
+                             text2: "Track & Field\nTournament\nDates",
                              padding: -18,
-                             text3: "November",
+                             text3: "April",
                              text4: "Sports")
                         .offset(x: -14, y: 10)
                     
                     LinkNews(url: URL(string: "https://storage.googleapis.com/pt04-2/messages/attachments/a3ef0a481ca39637f51e3a728895153d/Family_Bulletin_15_-_December_4%252C_2022.pdf")!,
                              text1: "News3",
-                             text2: "Jaguar Family\nBulletin #15",
-                             padding: -12,
-                             text3: "November",
+                             text2: "ParentSquare\nBulletin #28",
+                             padding: -15,
+                             text3: "April",
                              text4: "Monthly\nNewsletter")
                         .offset(x: -5, y: 10)
                     
                     // ExploreTab
-                    VStack {
-                        Text("Explore")
-                            .font(Font.custom("Quicksand-Bold", size: 15))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .offset(x: -5)
-                        
-                        HStack {
-                            LinkExploreTab(url: URL(string: "https://arbiterlive.com/Teams?entityId=45371")!,
-                                           text1: "Explore1",
-                                           text2: "Sports")
-                            
-                            LinkExploreTab(url: URL(string: "https://northcreek.nsd.org/our-school/bulletins")!,
-                                           text1: "Explore2",
-                                           text2: "Newsletters")
-                            
-                            LinkExploreTab(url: URL(string: "https://northcreek.nsd.org/our-school/school-news")!,
-                                           text1: "Explore3",
-                                           text2: "Events")
-                            
-                            LinkExploreTab(url: URL(string: "https://northcreek.nsd.org/activities/clubs")!,
-                                           text1: "Explore4",
-                                           text2: "Clubs")
-                        }
-                        .offset(x: -25)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .offset(x: 20, y: 15)
-                    .padding(.bottom, 5)
+                    Explore(padding1: -22, padding2: 0)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x: 30, y: 15)
+                        .padding(.bottom, 5)
                     
                     // Social media links
                     Logos()
@@ -121,5 +97,43 @@ struct News: View {
 struct News_Previews: PreviewProvider {
     static var previews: some View {
         News()
+    }
+}
+
+// Explore Tab inside of news and the home page
+struct Explore: View {
+    var padding1: CGFloat
+    var padding2: CGFloat
+    
+    var body: some View {
+        VStack {
+            Text("Explore")
+                .font(Font.custom("Quicksand-Bold", size: 15))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .offset(x: padding1)
+            
+            HStack {
+                LinkExploreTab(url: URL(string: "https://www.parentsquare.com/signin")!,
+                               text1: "Explore2",
+                               text2: "Newsletters",
+                               padding1: padding2)
+                               
+                LinkExploreTab(url: URL(string: "https://northcreek.nsd.org/our-school/school-news")!,
+                               text1: "Explore3",
+                               text2: "Events",
+                               padding1: padding2)
+                
+                LinkExploreTab(url: URL(string: "https://arbiterlive.com/School/Calendar/45371")!,
+                               text1: "Explore1",
+                               text2: "Sports",
+                               padding1: padding2)
+                
+                LinkExploreTab(url: URL(string: "https://northcreek.nsd.org/activities/clubs")!,
+                               text1: "Explore4",
+                               text2: "Clubs",
+                               padding1: padding2)
+            }
+            .offset(x: -40)
+        }
     }
 }

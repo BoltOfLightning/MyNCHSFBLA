@@ -12,6 +12,7 @@ struct Home: View {
     // Current instance of the user
     private let user = GIDSignIn.sharedInstance.currentUser
     
+    private let images = ["1", "2", "3", "4"]
     @State var showWebView = false
     @State var showWebView2 = false
     @State var showWebView3 = false
@@ -30,7 +31,7 @@ struct Home: View {
                             .background(Color("Color"))
                             .cornerRadius(20)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .offset(x: 20, y: 20)
+                            .offset(x: 35, y: 20)
                         
                         Spacer()
                         
@@ -39,7 +40,7 @@ struct Home: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50, alignment: .center)
                             .cornerRadius(30)
-                            .offset(x: -20, y: 20)
+                            .offset(x: -35, y: 20)
                     }
                 }
 
@@ -47,290 +48,110 @@ struct Home: View {
                 Text("Welcome to the Jungle, " + (user?.profile?.name ?? "") + "")
                     .font(Font.custom("Quicksand-Regular", size: 15))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .offset(x: 20, y: 30)
+                    .offset(x: 35, y: 30)
                 
                 // All the info drawn on the screen
                 VStack {
-                    HStack {
+                    VStack {
+                        // Gets the date and displays it
                         VStack {
                             HStack {
                                 Image(systemName: "sun.max.fill")
                                     .renderingMode(.original)
-
+                                
                                 Text("SUNNY")
                                     .font(Font.custom("Quicksand-Bold", size: 10))
                             }
-                            .offset(y: 60)
-
-                            // Gets the date and displays it
+                            
                             Text(Date.now, format: .dateTime.hour().minute())
-                                .font(Font.custom("Quicksand-Medium", size: 35))
-                                .offset(y: 60)
-
+                                .font(Font.custom("Quicksand-Bold", size: 60))
+                                .foregroundColor(Color("Color"))
+                            
                             Text(Date.now, format: .dateTime.day().month().year())
                                 .font(Font.custom("Quicksand-Regular", size: 15))
                                 .padding(.bottom, 20)
-                                .offset(y: 60)
-
+                            
                             Text("Semester 2")
                                 .font(Font.custom("Quicksand-Bold", size: 10))
-                                .offset(y: 60)
-
+                            
                             Image("Flower1")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 100, height: 100)
-                                .offset(x: -75, y: -20)
-                        }
-                        .frame(width: 170, height: 170)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color("Color"), lineWidth: 5)
-                        )
-                        .padding(.trailing, 5)
-
-                        VStack {
-                            Text("“It always seems impossible until it's done”")
-                                .font(Font.custom("Quicksand-Medium", size: 17))
-                                .multilineTextAlignment(.center)
-                                .padding(.bottom, 5)
-
-                            Text("NELSON MANDELA")
-                                .font(Font.custom("Quicksand-Regular", size: 10))
-                                .frame(alignment: .center)
-                        }
-                        .frame(width: 170, height: 170)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color("Color"), lineWidth: 5)
-                        )
-                    }
-                    .padding(.bottom, 5)
-
-                    // Newsletters
-                    HStack {
-                        Button {
-                            showWebView.toggle()
-                        } label: {
-                            VStack {
-                                Text("NEWSLETTERS")
-                                    .font(Font.custom("Quicksand-Bold", size: 22))
-                                    .foregroundColor(Color("Color"))
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .offset(x: 8, y: 56.5)
-
-                                Text("Jaguar Family Bulletin")
-                                    .font(Font.custom("Quicksand-Medium", size: 12))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .offset(x: 10, y: 60)
-
-                                Text("December")
-                                    .font(Font.custom("Quicksand-Regular", size: 8))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .offset(x: 10, y: 60)
-                                    .padding(.bottom, 3)
-
-                                Text("Jaguar Family Bulletin")
-                                    .font(Font.custom("Quicksand-Medium", size: 12))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .offset(x: 10, y: 60)
-
-                                Text("November")
-                                    .font(Font.custom("Quicksand-Regular", size: 8))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .offset(x: 10, y: 60)
-                                    .padding(.bottom, 3)
-
-                                Text("Jaguar Family Bulletin")
-                                    .font(Font.custom("Quicksand-Medium", size: 12))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .offset(x: 10, y: 60)
-
-                                Text("October")
-                                    .font(Font.custom("Quicksand-Regular", size: 8))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .offset(x: 10, y: 60)
-                                    .padding(.bottom, 3)
-
-                                Image("Flower2")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 120, height: 120)
-                                    .offset(x: 70, y: -30)
-
-                            }
-                            .frame(width: 170, height: 170)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color("Color"), lineWidth: 5)
-                            )
-                            .padding(.trailing, 5)
-                        }
-                        .sheet(isPresented: $showWebView) {
-                            WebView(url: URL(string: "https://northcreek.nsd.org/our-school/school-news")!)
-                        }
-
-                        // Student Info
-                        VStack {
-                            Text("STUDENT INFO")
-                                .font(Font.custom("Quicksand-Bold", size: 22))
-                                .foregroundColor(Color("Color"))
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .offset(x: 7, y: 1.7)
-
-                            HStack {
-                                Button {
-                                    showWebView2.toggle()
-                                } label: {
-                                    VStack {
-                                        Text("Grades")
-                                            .font(Font.custom("Quicksand-Medium", size: 12))
-                                            .foregroundColor(.black)
-                                            .frame(maxWidth: .infinity, alignment: .center)
-
-                                        Image("ParentVue")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 50, height: 50)
-                                            .cornerRadius(20)
-
-                                    }
-                                    .frame(width: 60, height: 100)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color("Color"), lineWidth: 5)
-                                    )
-                                    .padding(.trailing, 5)
-                                }
-                                .sheet(isPresented: $showWebView2) {
-                                    WebView(url: URL(string: "https://wa-nor-psv.edupoint.com/PXP2_Login_Parent.aspx?regenerateSessionId=True")!)
-                                }
-
-                                Button {
-                                    showWebView3.toggle()
-                                } label: {
-                                    VStack {
-                                        Text("Payment")
-                                            .font(Font.custom("Quicksand-Medium", size: 12))
-                                            .foregroundColor(.black)
-                                            .frame(maxWidth: .infinity, alignment: .center)
-                                            .offset(y: 1)
-
-                                        Image("NorthshoreLogo")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 50, height: 50)
-                                            .cornerRadius(20)
-                                    }
-                                    .frame(width: 60, height: 100)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color("Color"), lineWidth: 5)
-                                    )
-                                    .padding(.trailing, 5)
-                                }
-                                .sheet(isPresented: $showWebView3) {
-                                    WebView(url: URL(string: "https://wa-northshore.intouchreceipting.com/")!)
-                                }
-                            }
-
-                        }
-                        .frame(width: 170, height: 170)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color("Color"), lineWidth: 5)
-                        )
-                    }
-                    .padding(.bottom, 5)
-
-                    // Teacher Info
-                    HStack {
-                        VStack {
-                            Text("TEACHER INFO")
-                                .font(Font.custom("Quicksand-Bold", size: 22))
-                                .foregroundColor(Color("Color"))
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .offset(x: 7, y: 44.7)
-
-                            Text("Alphabetical order")
-                                .font(Font.custom("Quicksand-Medium", size: 12))
-                                .foregroundColor(.black)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .offset(y: 44.7)
-
-                            Image("Flower3")
+                                .offset(x: -155, y: -70)
+                            
+                            Image("Flower2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 80, height: 80)
-                                .offset(x: -70, y: 70)
-
-                            Button {
-                                showWebView4.toggle()
-                            } label: {
-                                VStack {
-                                    Text("Poonam Ahuja")
-                                        .font(Font.custom("Quicksand-Medium", size: 12))
-                                        .foregroundColor(.black)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-
-                                    Text("Ima Akpaidem")
-                                        .font(Font.custom("Quicksand-Medium", size: 12))
-                                        .foregroundColor(.black)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-
-                                    Text("Maasoma Alajami")
-                                        .font(Font.custom("Quicksand-Medium", size: 12))
-                                        .foregroundColor(.black)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-
-                                    Text("Carlos Aldrete")
-                                        .font(Font.custom("Quicksand-Medium", size: 12))
-                                        .foregroundColor(.black)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-
-                                    Text("Lisa Allen")
-                                        .font(Font.custom("Quicksand-Medium", size: 12))
-                                        .foregroundColor(.black)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-
-                                }
-                                .frame(width: 110, height: 60)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("gray"), lineWidth: 10)
-                                )
-                                .padding()
-                                .background(.gray.opacity(0.1))
-                                .cornerRadius(10)
-                                .shadow(radius: 10)
-                                .padding(.trailing, 5)
-                                .offset(y: -44.7)
-                            }
-                            .sheet(isPresented: $showWebView4) {
-                                WebView(url: URL(string: "https://northcreek.nsd.org/our-school/school-directory")!)
-                            }
-
+                                .frame(width: 120, height: 120)
+                                .offset(x: 140, y: -200)
                         }
-                        .frame(width: 170, height: 170)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color("Color"), lineWidth: 5)
-                        )
-                        .padding(.trailing, 5)
-
-                        Image("HomePageBeach")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 170, height: 170)
+                        .offset(y: 120)
                     }
+                    .padding()
+                    .frame(width: 350, height: 200)
+                    .background(.gray.opacity(0.1))
+                    .cornerRadius(20)
+                    .shadow(radius: 20)
+                    .offset(y: 30)
+                    .padding(.bottom, 10)
+                    
+                    
+                    // ExploreTab
+                    Explore(padding1: 10, padding2: 5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x: 30, y: 30)
+                        .padding(.bottom, 5)
+                    
+                    Text("Suggestions")
+                        .font(Font.custom("Quicksand-Bold", size: 15))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x: 40, y: 38)
+                    
+                    TabView {
+                        ForEach(0..<3) { item in
+                            if item == 1 {
+                                LinkSuggestions(url: URL(string: "https://wa-northshore.intouchreceipting.com/")!,
+                                                image: "Suggestions1",
+                                                text1: "Make Online Payments",
+                                                text2: "Pay on Touchbase →",
+                                                color: Color("Color"),
+                                                padding1: -50,
+                                                padding2: -27)
+                                
+                                LinkSuggestions(url: URL(string: "https://wa-nor-psv.edupoint.com/PXP2_Login_Parent.aspx?regenerateSessionId=True")!,
+                                                image: "Suggestions4",
+                                                text1: "Grades and Attendance",
+                                                text2: "Go to StudentVUE →",
+                                                color: Color("Blue"),
+                                                padding1: -55,
+                                                padding2: -27)
+                                
+                                LinkSuggestions(url: URL(string: "https://www.nsd.org/resources/support/virtual-calming-room")!,
+                                                image: "Suggestions2",
+                                                text1: "Virtual Calming Room",
+                                                text2: "Learn More →",
+                                                color: Color("Green"),
+                                                padding1: -40,
+                                                padding2: -27)
+                                
+                                LinkSuggestions(url: URL(string: "https://www.nsd.org/schools/academics/career-college-readiness")!,
+                                                image: "Suggestions3",
+                                                text1: "College Readiness",
+                                                text2: "Click Here →",
+                                                color: Color("Yellow"),
+                                                padding1: -33,
+                                                padding2: -27)
+                            }
+                                
+                        }
+                    }
+                    .offset(y: 40)
+                    .frame(width: 420, height: 180)
+                    .tabViewStyle(PageTabViewStyle())
+                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                            
                 }
-                .offset(y: 40)
             }
         }
         .navigationViewStyle(.stack)

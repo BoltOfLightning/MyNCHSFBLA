@@ -165,7 +165,7 @@ struct Info: View {
                     .frame(width: 350, height: 225)
                     .offset(y: 20)
                 
-                Text("Version 2.0")
+                Text("Version 2.5")
                     .font(Font.custom("Quicksand-Bold", size: 20))
                     .padding()
                     .offset(y: -20)

@@ -16,6 +16,7 @@ struct LinkExploreTab: View {
     var url: URL
     var text1: String
     var text2: String
+    var padding1: CGFloat
     
     var body: some View {
         Button {
@@ -26,10 +27,12 @@ struct LinkExploreTab: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 75, height: 75)
+                    .offset(x: padding1)
                 
                 Text(text2)
                     .font(Font.custom("Quicksand-Bold", size: 10))
                     .foregroundColor(.black)
+                    .offset(x: padding1)
             }
         }
         .sheet(isPresented: $showWebView) {

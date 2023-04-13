@@ -13,6 +13,7 @@
 		276F8D8029E47DDF00BB4D69 /* LinkInfoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F8D7F29E47DDF00BB4D69 /* LinkInfoTab.swift */; };
 		276F8D8229E71E6100BB4D69 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F8D8129E71E6100BB4D69 /* LinkButton.swift */; };
 		276F8D8629E7302100BB4D69 /* WebView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F8D8529E7302100BB4D69 /* WebView2.swift */; };
+		276F8D8C29E88BB800BB4D69 /* LinkSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F8D8B29E88BB800BB4D69 /* LinkSuggestions.swift */; };
 		277170DD286E763600FC0440 /* MyNCHSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170DC286E763600FC0440 /* MyNCHSApp.swift */; };
 		277170DF286E763600FC0440 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277170DE286E763600FC0440 /* ContentView.swift */; };
 		277170E1286E763800FC0440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277170E0286E763800FC0440 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		276F8D7F29E47DDF00BB4D69 /* LinkInfoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInfoTab.swift; sourceTree = "<group>"; };
 		276F8D8129E71E6100BB4D69 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		276F8D8529E7302100BB4D69 /* WebView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView2.swift; sourceTree = "<group>"; };
+		276F8D8B29E88BB800BB4D69 /* LinkSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSuggestions.swift; sourceTree = "<group>"; };
 		277170D9286E763600FC0440 /* MyNCHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNCHS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277170DC286E763600FC0440 /* MyNCHSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNCHSApp.swift; sourceTree = "<group>"; };
 		277170DE286E763600FC0440 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,9 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				276F8D8129E71E6100BB4D69 /* LinkButton.swift */,
+				276F8D8B29E88BB800BB4D69 /* LinkSuggestions.swift */,
 				27740031295F6DF600E9FEBB /* LinkNews.swift */,
-				27740033295F6E0100E9FEBB /* LinkExploreTab.swift */,
 				276F8D7F29E47DDF00BB4D69 /* LinkInfoTab.swift */,
+				27740033295F6E0100E9FEBB /* LinkExploreTab.swift */,
 			);
 			path = LinkObjects;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27AC47EF295125BF007E0485 /* EventsCalendarView.swift in Sources */,
+				276F8D8C29E88BB800BB4D69 /* LinkSuggestions.swift in Sources */,
 				27CB1E002963B0E2002F753F /* NotificationHandler.swift in Sources */,
 				27AC47F52951294F007E0485 /* DaysEvents.swift in Sources */,
 				277170F8286F99B100FC0440 /* GoogleSignInButton.swift in Sources */,
@@ -514,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sailalithkanumuri.GoogleSignInPage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -547,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sailalithkanumuri.GoogleSignInPage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
