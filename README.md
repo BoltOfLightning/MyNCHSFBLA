@@ -6,7 +6,6 @@ By Sai Lalith Kanumuri, Bryan Nie, and Rithin Karthik
 ## Abstract
 MyNCHS is an app for the North Creek High School Community. It holds many different features to help all users extract information on subjects related to our school. The app features many different features, like integrated social media, calendar scheduling, and more, which are either essential features or requirements for FBLA Mobile Application Development submissions. Along with the necessities for an information and productivity app, MyNCHS also provides in-built messaging, to communicate with North Creek personnel. The entirety of the app was built with Xcode, SwiftUI, UIkit, and more platforms, for iPhone and iPad, allowing for a streamlined, and stable app.
 
-
 ## Pages
 These are all of the big pages in the app, and information about them.
 ### Home
@@ -55,6 +54,10 @@ MyNCHS does not handle any unnecessary data, nor does it share any of that data 
 We used many different sources to code and learn. Thanks to the individuals or groups below for making us able to code this app.
 
 We thank our FBLA advisor, Mr.Barnes, for being well versed and supportive to all of us.
+
+We thank Dhanush Eashwar, for giving us helpful advice and feedback along the way.
+
+We used previous FBLA NLC Finalist Presentations to make ours better. We thank them for providing these for public use.
 
 We thank FBLA-PBL for giving us an amazing learning oppurtunity, and for conducting this Mobile Application Development competition.
 
