@@ -56,7 +56,30 @@ SwiftUI is a programming language by Apple to easily make apps for apple devices
 
 The solution to that was using Firebase as well. We used Firebase for any backend processing not done solely on the device. We used Firebase to implement Google SSO technology, and to handle messages in our messaging feature.
 ## Privacy
-MyNCHS does not handle any unnecessary data, nor does it share any of that data with third parties. Child Safety guidlines would make data collection a hassle. In the future, MyNCHS may collect substantial amounts of data. However, this data will only be used to make your experience in the app better, through learning what features you use, etc. your data will not be used to send you relevant ads, nor will it be sold to other companies.
+
+At MyNCHS, we are committed to protecting the privacy of our users. This privacy policy outlines the types of data we collect, how we collect it, how we use it, and how we protect it.
+
+#### Collection of Data
+Without your express consent to have your data used, we will not collect any of your personal information. We may gather the following kinds of data if you decide to use our app and consent to its collection: Your name, email address, phone number, and any other details you give us are all considered to be personal information. Information concerning your usage of our app, such as the features you use, the sites you view, and the time and date of your activity, may be included in this category. Information regarding the device you are using to access our app, such as the model, operating system, and browser, may be included in this.
+
+#### Opportunity for Data Collection
+Please be aware that this chance could or might not arise in the future. We are dedicated to being open and honest with our users, and if we intend to gather any data, we'll let you know beforehand.
+
+#### Sharing of Data
+We value your privacy and will never divulge any of your personal information to any parties. Your information is private and will only be utilized to enhance our app. However, if our affiliates or service partners help us serve you with our app, we could share your data with them. Your data will be protected by these service providers according to their contractual obligations, and they are only allowed to use it for the stated purposes.
+
+#### Use of Data
+All information gathered will only be used to enhance the app. In order to provide you the best experience possible, we utilize your data to enhance the features and operation of our app. Additionally, we could contact with you through email about upcoming features or special offers that might be of interest to you.
+
+#### Security of Data
+We have put in place reasonable technological and organizational safeguards to guard your data against unauthorized access, disclosure, modification, and destruction because we take the security of your data seriously. To guarantee that your data is kept safe and secure, we also examine and update our security procedures on a regular basis.
+
+#### Retention of Data
+Your data will be kept on file for as long as is required to fulfill our legal requirements and give you access to our app. Additionally, we could keep your information for a reasonable amount of time after you stop using our app in order to enhance it and fight fraud or other nefarious acts.
+
+#### Conclusion
+Your privacy is important to us, and it is something we take seriously. Please contact us at rithinkarthik13@gmail.com if you have any inquiries regarding our privacy statement or would like to exercise your rights with regard to your data.
+
 ## Future Plans
 - Offer light and dark modes
 - Android App Support
