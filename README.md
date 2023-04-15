@@ -1,6 +1,6 @@
 # MyNCHS 2.0
 
-Made for FBLA Mobile Application Development
+An FBLA Mobile Application Development Project
 By Sai Lalith Kanumuri, Bryan Nie, and Rithin Karthik
 
 ## Abstract
@@ -9,6 +9,7 @@ MyNCHS is an app for the North Creek High School Community. It holds many differ
 ## Pages
 These are all of the big pages in the app, and information about them.
 ### Home
+
 The homepage is the gateway to all of the other pages and features of the app. It is clean and organized, to cause little confusion. It uses a system called WebView to view external media inside of the app, for more containment.
 
 ### News
@@ -65,13 +66,14 @@ We thank FBLA-PBL for giving us an amazing learning oppurtunity, and for conduct
 Any unoriginal images used in our project are protected under [Fair Use and Other Educational Uses.](https://www.lib.uchicago.edu/copyrightinfo/fairuse.html)
 
 These images are credited in our 3 works cited pages.
-Images Works Cited: https://docs.google.com/document/d/1gb0S_kpVNI2wj3yfwLtIDacHqMnh-fjf/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true
 
-Libraries Works Cited: https://docs.google.com/document/d/1VhGBdrG-mcTlNvxbQyq2tXTVA--JAKM6/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true
+[Images Works Cited](https://docs.google.com/document/d/1gb0S_kpVNI2wj3yfwLtIDacHqMnh-fjf/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true)
 
-Resources Works Cited: https://docs.google.com/document/d/182PEfug-UBgXZYwSAnSAetnL3N1sTuj-/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true
+[Libraries Works Cited](https://docs.google.com/document/d/1VhGBdrG-mcTlNvxbQyq2tXTVA--JAKM6/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true)
 
-Works Cited Folder: https://drive.google.com/drive/folders/1p-5PA3dV4sLJx7Tha5dkODcOeL9XaEXU?usp=sharing
+[Resources Works Cited](https://docs.google.com/document/d/182PEfug-UBgXZYwSAnSAetnL3N1sTuj-/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true)
+
+[Works Cited Folder](https://drive.google.com/drive/folders/1p-5PA3dV4sLJx7Tha5dkODcOeL9XaEXU?usp=sharing)
 
 The Google logo is used in compliance with [Googles trademark usage guidelines.](https://www.google.com/permissions/trademark/rules.html)
 
