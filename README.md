@@ -59,18 +59,13 @@ The solution to that was using Firebase as well. We used Firebase for any backen
 MyNCHS does not handle any unnecessary data, nor does it share any of that data with third parties. Child Safety guidlines would make data collection a hassle. In the future, MyNCHS may collect substantial amounts of data. However, this data will only be used to make your experience in the app better, through learning what features you use, etc. your data will not be used to send you relevant ads, nor will it be sold to other companies.
 ## Future Plans
 - Offer light and dark modes
+- Android App Support
 - Change the menu bar
 - Add more features
 	- Announcements
 	- In-built note space
 	- Home screen widget
-- Make app more versatile
-	- Get info from databases and put them into our app real time
-		- Ex: weather and news 
-- Additional support for iPad and Mac
-	- Proper scaling
-- Security features
-	- End to end encryption
+- Additional support for Mac
 
 ## Acknowledgments
 We used many different sources to code and learn. Thanks to the individuals or groups below for making us able to code this app.
