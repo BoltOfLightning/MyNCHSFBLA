@@ -23,9 +23,9 @@ Behind the scenes, when the user logs in with Firebase, the homepage runs and go
 
 ### News
 ![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newspage%20code%20explanation.png)
-One of the areas the user can go to from here is the news page. This page shows all of the recent news regarding North Creek. It is also organized in sections by topic. It has very user-friendly navigation, so you can find what you want easily
+One of the areas the user can go to from here is the news page. This page shows all of the recent news regarding North Creek. It is also organized in sections by topic. It has very user-friendly navigation, so you can find what you want easily.
 
-with Firebase and Google SSO, the app can fetch the users information to display. The news subpages explore shows all of the newsletters, and it uses Webview, and a link news class to fetch articles from NSD’s site. Also social media links are fetched here using Webview and the Logos subpage.
+With Firebase and Google SSO, the app can fetch the users information to display. The news subpages explore shows all of the newsletters, and it uses Webview, and a link news class to fetch articles from NSD’s site. Also social media links are fetched here using Webview and the Logos subpage.
 
 ### Calendar
 ![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/calendar%20image%20code%20explanation.png)
@@ -84,6 +84,7 @@ Your privacy is important to us, and it is something we take seriously. Please c
 - Offer light and dark modes
 - Android App Support
 - Change the menu bar
+- In-built messaging feature
 - Add more features
 	- Announcements
 	- In-built note space
