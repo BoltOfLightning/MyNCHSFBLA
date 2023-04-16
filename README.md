@@ -105,7 +105,7 @@ We thank FBLA-PBL for giving us an amazing learning oppurtunity, and for conduct
 ## Copyright
 Any unoriginal images used in our project are protected under [Fair Use and Other Educational Uses.](https://www.lib.uchicago.edu/copyrightinfo/fairuse.html)
 
-These images are credited in our 3 works cited pages.
+These images are credited in our 4 works cited pages.
 
 [Images Works Cited](https://docs.google.com/document/d/1gb0S_kpVNI2wj3yfwLtIDacHqMnh-fjf/edit?usp=sharing&ouid=108122212341901317168&rtpof=true&sd=true)
 
