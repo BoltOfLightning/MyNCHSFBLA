@@ -1,4 +1,4 @@
-# MyNCHS 2.0
+# MyNCHS 2.5
 ![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/MyNCHS%20cover%20logo.png)
 
 An FBLA Mobile Application Development Project
@@ -112,6 +112,7 @@ Your privacy is important to us, and it is something we take seriously. Please c
 	- In-built note space
 	- Home screen widget
 - Additional support for Mac
+- Text to speech
 
 ## Acknowledgments
 We used many different sources to code and learn. Thanks to the individuals or groups below for making us able to code this app.
