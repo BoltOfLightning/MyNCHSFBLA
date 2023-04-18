@@ -5,7 +5,29 @@ An FBLA Mobile Application Development Project
 By Sai Lalith Kanumuri, Bryan Nie, and Rithin Karthik
 
 ## Abstract
-MyNCHS is an app for the North Creek High School Community. It holds many different features to help all users extract information on subjects related to our school. The app features many different features, like integrated social media, calendar scheduling, and more, which are either essential features or requirements for FBLA Mobile Application Development submissions. Along with the necessities for an information and productivity app, MyNCHS also provides in-built messaging, to communicate with North Creek personnel. The entirety of the app was built with Xcode, SwiftUI, UIkit, and more platforms, for iPhone and iPad, allowing for a streamlined, and stable app.
+MyNCHS is an app for the North Creek High School Community. It holds many different features to help all users extract information on subjects related to our school. The app features many different features, like integrated social media, calendar scheduling, and more, which are either essential features or requirements for FBLA Mobile Application Development submissions. Along with the necessities for an information and productivity app, MyNCHS also provides in-built mailing, to communicate with North Creek personnel. The entirety of the app was built with Xcode, SwiftUI, UIkit, and more platforms, for iPhone and iPad, allowing for a streamlined, and stable app.
+
+## Issue
+We are from North Creek High School and are founders of MyNCHS, an app geared towards the North Creek community to stay informed and organized. We know how time-consuming it is for parents to find information about their school. That’s why we developed MyNCHS, the new way for parents to stay informed about North Creek High School fast and seamlessly.
+
+
+## Installation
+```
+TO VIEW ON MACOS
+1.Install Xcode Dev Tools on the Apple App Store for Mac
+https://apps.apple.com/us/app/xcode/id497799835
+2. Follow instructions to download this repo as a .ZIP file
+https://sites.northwestern.edu/researchcomputing/resources/downloading-from-github/
+3. Find the project.pbxproj file inside the files. It will be in the MyNCHS.xcodeproj folder when you extract and view the parent folder.
+4.After that, log in with your developer account.
+5. All thats left is to choose a simulator of choice and build!
+```
+
+```
+TO VIEW ON iOS
+1. If you want to view the MyNCHS app directly on your iPhone, plug your phone into your Mac. In the simulator options you can use your phone as an option.
+2. When running, you may get a prompt on your phone to approve the app. Along with that, ensure your phone meets the requirements of the app.
+```
 
 ## Pages
 These are all of the big pages in the app, and information about them.
