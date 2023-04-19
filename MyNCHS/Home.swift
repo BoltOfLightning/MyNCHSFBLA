@@ -8,11 +8,11 @@
 import SwiftUI
 import GoogleSignIn
 
+// Displays the home page
 struct Home: View {
     // Current instance of the user
     private let user = GIDSignIn.sharedInstance.currentUser
     
-    private let images = ["1", "2", "3", "4"]
     @State var showWebView = false
     @State var showWebView2 = false
     @State var showWebView3 = false
@@ -45,7 +45,7 @@ struct Home: View {
                 }
 
                 // Profile name of the user, got from Google
-                Text("Welcome to the Jungle, " + (user?.profile?.name ?? "") + "")
+                Text("Welcome to the Jungle, \(user?.profile?.name ?? "")")
                     .font(Font.custom("Quicksand-Regular", size: 15))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .offset(x: 35, y: 30)
@@ -108,9 +108,10 @@ struct Home: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .offset(x: 40, y: 38)
                     
+                    // Image Caraousel for Suggestions
                     TabView {
-                        ForEach(0..<3) { item in
-                            if item == 1 {
+                        ForEach(0..<4) { item in
+                            if item == 0 {
                                 LinkSuggestions(url: URL(string: "https://wa-northshore.intouchreceipting.com/")!,
                                                 image: "Suggestions1",
                                                 text1: "Make Online Payments",
@@ -118,7 +119,7 @@ struct Home: View {
                                                 color: Color("Color"),
                                                 padding1: -50,
                                                 padding2: -27)
-                                
+                            } else if item == 1 {
                                 LinkSuggestions(url: URL(string: "https://wa-nor-psv.edupoint.com/PXP2_Login_Parent.aspx?regenerateSessionId=True")!,
                                                 image: "Suggestions4",
                                                 text1: "Grades and Attendance",
@@ -126,7 +127,7 @@ struct Home: View {
                                                 color: Color("Blue"),
                                                 padding1: -55,
                                                 padding2: -27)
-                                
+                            } else if item == 2 {
                                 LinkSuggestions(url: URL(string: "https://www.nsd.org/resources/support/virtual-calming-room")!,
                                                 image: "Suggestions2",
                                                 text1: "Virtual Calming Room",
@@ -134,7 +135,7 @@ struct Home: View {
                                                 color: Color("Green"),
                                                 padding1: -40,
                                                 padding2: -27)
-                                
+                            } else if item == 3 {
                                 LinkSuggestions(url: URL(string: "https://www.nsd.org/schools/academics/career-college-readiness")!,
                                                 image: "Suggestions3",
                                                 text1: "College Readiness",

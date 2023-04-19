@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// This is the type of event on whether it is new or updated
+// Form type to check whether it is new or updated
 enum EventFormType: Identifiable, View {
     case new
     case update(Event)

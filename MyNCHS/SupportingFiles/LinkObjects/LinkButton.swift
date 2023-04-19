@@ -42,14 +42,14 @@ struct LinkButton: View {
                     .cornerRadius(10)
                 
                 VStack {
-                    Text(text1)
+                    Text(LocalizedStringKey(text1))
                         .font(.title)
                         .foregroundColor(color)
                         .fontWeight(.medium)
                         .kerning(1.1)
                         .offset(x: xOffset1, y: yOffset1)
                     
-                    Text(text2)
+                    Text(LocalizedStringKey(text2))
                         .font(Font.custom("Quicksand-Bold", size: 10))
                         .foregroundColor(color)
                         .offset(x: xOffset2, y: yOffset2)

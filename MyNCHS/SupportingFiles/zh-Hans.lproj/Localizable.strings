@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  MyNCHS
+
+  Created by SaiLalith Kanumuri on 4/15/23.
+  
+*/
+
+"MyNCHS" = "MyNCHS";
+"Together we rise" = "我们一起崛起";
+"SIGN IN WITH GOOGLE" = "使用谷歌登录";
+"Home" = "家";
+"Welcome to the Jungle, %@" = "欢迎来到丛林, %@";
+"SUNNY" = "阳光";
+"Semester 2" = "第二学期";
+"Explore" = "探索";
+"Newsletters" = "时事通讯";
+"Events" = "事件";
+"Sports" = "运动的";
+"Clubs" = "俱乐部";
+"Suggestions" = "建议";
+"Make Online Payments" = "进行在线支付";
+"Pay on Touchbase →" = "Touchbase 支付 →";
+"Grades and Attendance" = "成绩和出勤";
+"Go to StudentVUE →" = "前往StudentVUE →";
+"Virtual Calming Room" = "虚拟平静室";
+"Learn More →" = "了解更多 →";
+"College Readiness" = "大学准备";
+"Click Here →" = "点击这里 →";
+
+"News" = "消息";
+"Your Newsletters, %@" = "你的时事通讯, %@";
+"ParentSquare Bulletin #30" = "ParentSquare\n 公告 #30";
+"Track & Field\nTournament\nDates" = "田径锦标赛日期";
+"ParentSquare Bulletin #29" = "ParentSquare\n 公告 #29";
+"Follow Us" = "跟着我们";
+"Instagram" = "Instagram";
+"Twitter" = "Twitter";
+"Facebook" = "Facebook";
+"Youtube" = "Youtube";
+"April" = "四月";
+"Monthly\nNewsletter" = "每月通讯";
+
+"Calendar" = "日历";
+"Your Calendar, %@" = "你的日历, %@";
+
+"Info" = "信息";
+"SIGN OUT" = "登出";
+"Notification Permissions" = "通知权限";
+"Closures & Delays" = "关闭和延误";
+"Enrollment" = "注册";
+"Schedule" = "日程";
+"Safety & Security" = "安全保障";
+"Feedback or Report Bugs Here!" = "在这里反馈或报告错误！";
+"Version" = "版本";

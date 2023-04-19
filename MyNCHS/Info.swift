@@ -8,6 +8,7 @@
 import SwiftUI
 import GoogleSignIn
 
+// Displays the info page
 struct Info: View {
     // Authenticates the user to enter the app
     @EnvironmentObject var viewModel: AuthenticationViewModel
@@ -17,6 +18,8 @@ struct Info: View {
     
     // Allows external links to pop up in the app
     @State var showWebView = false
+    @State var showWebView2 = false
+    @State var showWebView3 = false
     
     // Allows app to send notifications
     let notify = NotificationHandler()
@@ -79,17 +82,18 @@ struct Info: View {
                     .padding(.bottom, 10)
                     
                     // Asks user for permission to send notifications for the calendar
-                    Button("Notification Permssions") {
+                    Button {
                         notify.askPermission()
+                    } label: {
+                        Text(LocalizedStringKey("Notification Permissions"))
+                            .foregroundColor(.white)
+                            .font(Font.custom("Quicksand-Regular", size: 20))
+                            .padding()
+                            .frame(width: 355, height: 50)
+                            .background(Color("Color"))
+                            .cornerRadius(20)
+                            .offset(y: 23)
                     }
-                    .foregroundColor(.white)
-                    .font(Font.custom("Quicksand-Regular", size: 20))
-                    .padding()
-                    .frame(width: 355, height: 50)
-                    .background(Color("Color"))
-                    .cornerRadius(20)
-                    .offset(y: 23)
-                    
                 }
                 
                 // Row of buttons with school information
@@ -165,10 +169,46 @@ struct Info: View {
                     .frame(width: 350, height: 225)
                     .offset(y: 20)
                 
+                HStack {
+                    Button {
+                        showWebView2.toggle()
+                    } label: {
+                        VStack {
+                            Text(LocalizedStringKey("Work Cited"))
+                                .foregroundColor(.white)
+                                .font(Font.custom("Quicksand-Regular", size: 15))
+                                .padding()
+                                .frame(width: 150, height: 50)
+                                .background(Color("Color"))
+                                .cornerRadius(20)
+                        }
+                    }
+                    .sheet(isPresented: $showWebView2) {
+                        WebView(url: URL(string: "https://docs.google.com/document/d/1g8Oh0PrIpdjN9C6eT8H6-ci4KRpU0skzXFcHfyjMTR4/edit?usp=sharing")!)
+                    }
+                    
+                    Button {
+                        showWebView3.toggle()
+                    } label: {
+                        VStack {
+                            Text(LocalizedStringKey("Source Code"))
+                                .foregroundColor(.white)
+                                .font(Font.custom("Quicksand-Regular", size: 15))
+                                .padding()
+                                .frame(width: 150, height: 50)
+                                .background(Color("Color"))
+                                .cornerRadius(20)
+                        }
+                    }
+                    .sheet(isPresented: $showWebView3) {
+                        WebView(url: URL(string: "https://github.com/BoltOfLightning/MyNCHSFBLA")!)
+                    }
+                }
+                
                 Text("Version 2.5")
                     .font(Font.custom("Quicksand-Bold", size: 20))
                     .padding()
-                    .offset(y: -20)
+                    
             }
             
             

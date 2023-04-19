@@ -15,7 +15,7 @@ struct Event: Identifiable {
             self.rawValue
         }
 
-        // All the types of events
+        // All the event types
         var icon: String {
             switch self {
             case .school:
@@ -36,8 +36,6 @@ struct Event: Identifiable {
     var date: Date
     var note: String
     var id: String
-    //let dateFormatter = DateFormatter()
-    //dateFormatter.dateFormat = "dd/MM/yyyy"
     
     // Defines what a date should be
     var dateComponents: DateComponents {
@@ -60,21 +58,28 @@ struct Event: Identifiable {
         self.id = id
     }
 
-    // Data to be used in the preview
+    // All the events preloaded into the calendar
     static var sampleEvents: [Event] {
         return [
             //Event(eventType: .home, date: dateFormatter.date(from: "12/16/2022")!, note: "Winter break starts"),
-            Event(eventType: .home, date: Date().diff(numDays: -3), note: "Winter break starts"),
-            Event(eventType: .home, date: Date().diff(numDays: -1), note: "Winter break ends"),
-            Event(eventType: .school, date: Date().diff(numDays: 6), note: "Early release wednesday"),
-            Event(eventType: .social, date: Date().diff(numDays: 2), note: "North Creek champions chapter"),
             Event(eventType: .school, date: Date().diff(numDays: -1), note: "Early release wednesday"),
-            Event(eventType: .unspecified, date: Date().diff(numDays: -3), note: "MLK day"),
-            Event(eventType: .school, date: Date().diff(numDays: -4), note: "Early release wednesday"),
-            Event(eventType: .school, date: Date().diff(numDays: -3), note: "Early release wednesday"),
-            Event(eventType: .school, date: Date().diff(numDays: -4), note: "End of the semester"),
-            Event(eventType: .unspecified, date: Date().diff(numDays: -4), note: "Grading day")
-            //Event(eventType: .sport, date: Date().diff(numDays: -4), note: "Boys and girls basketball"),
+            Event(eventType: .social, date: Date().diff(numDays: -1), note: "FBLA Day 1"),
+            Event(eventType: .social, date: Date().diff(numDays: 0), note: "FBLA Day 2"),
+            Event(eventType: .social, date: Date().diff(numDays: 1), note: "FBLA Day 3"),
+            Event(eventType: .social, date: Date().diff(numDays: 2), note: "FBLA Day 4"),
+            Event(eventType: .school, date: Date().diff(numDays: 6), note: "Early release wednesday"),
+            Event(eventType: .social, date: Date().diff(numDays: 0), note: "FBLA Mobile Application Development Presentation"),
+            Event(eventType: .school, date: Date().diff(numDays: 11), note: "Advanced Placement Testing Starts"),
+            Event(eventType: .sport, date: Date().diff(numDays: 5), note: "Varsity Girls Golf vs. Eastlake"),
+            Event(eventType: .sport, date: Date().diff(numDays: 5), note: "Varsity Girls Tennis vs. Woodinville"),
+            Event(eventType: .sport, date: Date().diff(numDays: 0), note: "Varsity Track vs. Inglemoor"),
+            Event(eventType: .sport, date: Date().diff(numDays: 4), note: "Varsity Boys Baseball vs. Inglemoor"),
+            Event(eventType: .sport, date: Date().diff(numDays: 0), note: "Varsity Girls Tennis vs. Inglemoor"),
+            Event(eventType: .school, date: Date().diff(numDays: 0), note: "Varsity Boys Soccer vs. Woodinville"),
+            Event(eventType: .sport, date: Date().diff(numDays: 1), note: "Varsity Girls Softball vs. Skyline"),
+            Event(eventType: .sport, date: Date().diff(numDays: 1), note: "Varsity Boys Baseball vs. Mount Si"),
+            Event(eventType: .school, date: Date().diff(numDays: 8), note: "AP Procters Needed"),
+            Event(eventType: .school, date: Date().diff(numDays: 7), note: "Cap and Gown Delivery - Seniors")
         ]
     }
 }

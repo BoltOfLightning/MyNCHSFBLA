@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  MyNCHS
+
+  Created by SaiLalith Kanumuri on 4/15/23.
+  
+*/
+
+"MyNCHS" = "MyNCHS";
+"Together we rise" = "साथ साथ हम उन्नति करेंगे";
+"SIGN IN WITH GOOGLE" = "गूगल के साथ साइन इन करें";
+"Home" = "घर";
+"Welcome to the Jungle, %@" = "जंगल में आपका स्वागत है, %@";
+"SUNNY" = "धूप वाला";
+"Semester 2" = "सेमेस्टर 2";
+"Explore" = "अन्वेषण करना";
+"Newsletters" = "समाचार";
+"Events" = "आयोजन";
+"Sports" = "खेल";
+"Clubs" = "क्लब";
+"Suggestions" = "सुझाव";
+"Make Online Payments" = "   ऑनलाइन भुगतान करें";
+"Pay on Touchbase →" = "टचबेस पर भुगतान करें →";
+"Grades and Attendance" = "ग्रेड और उपस्थिति";
+"Go to StudentVUE →" = "स्टूडेंट वीयूई पर जाएं →";
+"Virtual Calming Room" = "वर्चुअल कैलमिंग रूम";
+"Learn More →" = "और अधिक जानें →";
+"College Readiness" = "कॉलेज की तैयारी";
+"Click Here →" = "यहाँ क्लिक करें →";
+
+"News" = "समाचार";
+"Your Newsletters, %@" = "आपके न्यूज़लेटर्स, %@";
+"ParentSquare Bulletin #30" = "पेरेंटस्क्वायर बुलेटिन #30";
+"Track & Field\nTournament\nDates" = "ट्रैक एंड फील्ड टूर्नामेंट दिनांक";
+"ParentSquare Bulletin #29" = "पेरेंटस्क्वायर बुलेटिन #29";
+"Follow Us" = "हमारे पर का पालन करें";
+"Instagram" = "Instagram";
+"Twitter" = "Twitter";
+"Facebook" = "Facebook";
+"Youtube" = "Youtube";
+"April" = "अप्रैल";
+"Monthly\nNewsletter" = "मासिक न्यूज़लेटर";
+
+"Calendar" = "पंचांग";
+"Your Calendar, %@" = "आपका कैलेंडर, %@";
+
+"Info" = "जानकारी";
+"SIGN OUT" = "साइन आउट";
+"Notification Permissions" = "अधिसूचना अनुमतियाँ";
+"Closures & Delays" = "क्लोजर और देरी";
+"Enrollment" = "उपस्थिति पंजी";
+"Schedule" = "अनुसूची";
+"Safety & Security" = "सुरक्षा";
+"Feedback or Report Bugs Here!" = "फीडबैक या यहां बग की रिपोर्ट करें!";
+"Version" = "संस्करण";

@@ -43,6 +43,8 @@ struct DaysEventsListView: View {
     }
 }
 
+// This has what all the events should have
+// All the day events HAVE this
 struct DaysEventsListView_Previews: PreviewProvider {
     static var dateComponents: DateComponents {
         var dateComponents = Calendar.current.dateComponents(

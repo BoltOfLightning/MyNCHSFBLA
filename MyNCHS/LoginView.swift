@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// This displayed the login page
 struct LoginView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
 

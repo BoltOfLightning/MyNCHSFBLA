@@ -8,6 +8,7 @@
 import SwiftUI
 import GoogleSignIn
 
+// Displays the news page
 struct News: View {
     // Current instance of the user
     private let user = GIDSignIn.sharedInstance.currentUser
@@ -38,7 +39,7 @@ struct News: View {
                     }
 
                     // Gtes user's profile name from google
-                    Text("Your Newsletters, " + (user?.profile?.name ?? "") + "")
+                    Text("Your Newsletters, \(user?.profile?.name ?? "")")
                         .font(Font.custom("Quicksand-Regular", size: 15))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .offset(x: 4, y: 15)
@@ -46,7 +47,7 @@ struct News: View {
                     // Main news
                     LinkNews(url: URL(string: "https://www.parentsquare.com/schools/18569/feeds")!,
                              text1: "News1",
-                             text2: "ParentSquare\nBulletin #29",
+                             text2: "ParentSquare Bulletin #30",
                              padding: -15,
                              text3: "April",
                              text4: "Monthly\nNewsletter")
@@ -60,9 +61,9 @@ struct News: View {
                              text4: "Sports")
                         .offset(x: -14, y: 10)
                     
-                    LinkNews(url: URL(string: "https://storage.googleapis.com/pt04-2/messages/attachments/a3ef0a481ca39637f51e3a728895153d/Family_Bulletin_15_-_December_4%252C_2022.pdf")!,
+                    LinkNews(url: URL(string: "https://www.parentsquare.com/schools/18569/feeds")!,
                              text1: "News3",
-                             text2: "ParentSquare\nBulletin #28",
+                             text2: "ParentSquare Bulletin #29",
                              padding: -15,
                              text3: "April",
                              text4: "Monthly\nNewsletter")
@@ -112,6 +113,7 @@ struct Explore: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .offset(x: padding1)
             
+            // Row of images and text for types of news
             HStack {
                 LinkExploreTab(url: URL(string: "https://www.parentsquare.com/signin")!,
                                text1: "Explore2",
@@ -123,7 +125,7 @@ struct Explore: View {
                                text2: "Events",
                                padding1: padding2)
                 
-                LinkExploreTab(url: URL(string: "https://arbiterlive.com/School/Calendar/45371")!,
+                LinkExploreTab(url: URL(string: "https://arbiterlive.com/Teams?entityId=45371")!,
                                text1: "Explore1",
                                text2: "Sports",
                                padding1: padding2)

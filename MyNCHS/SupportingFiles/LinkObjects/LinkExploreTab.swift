@@ -29,7 +29,7 @@ struct LinkExploreTab: View {
                     .frame(width: 75, height: 75)
                     .offset(x: padding1)
                 
-                Text(text2)
+                Text(LocalizedStringKey(text2))
                     .font(Font.custom("Quicksand-Bold", size: 10))
                     .foregroundColor(.black)
                     .offset(x: padding1)

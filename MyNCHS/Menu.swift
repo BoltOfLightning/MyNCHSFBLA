@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// This is the menu bar
 // This will always keep a look out for user actions like pressing on the menu
 struct Menu: View {
     // What button on the menu the user pressed on
@@ -45,7 +46,7 @@ struct Menu: View {
                 }.tag(2)
 
             // When clicked, it will launch gmail directly from the app
-            Messages().navigationTitle("x")
+            Mailing().navigationTitle("x")
                 .tabItem {
                     if selection == 3 {
                         Image(systemName: "envelope.open.fill")

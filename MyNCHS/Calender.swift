@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Displays the calendar with the help of EventsCalendarView
 struct Calender: View {
     // Instanciates EventStore, which has all the events in the calendar
     @StateObject var myEvents = EventStore(preview: true)

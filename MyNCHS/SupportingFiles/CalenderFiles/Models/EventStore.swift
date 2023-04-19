@@ -25,7 +25,7 @@ class EventStore: ObservableObject {
         if preview {
             events = Event.sampleEvents
         } else {
-            // load from your persistence store
+            
         }
     }
 

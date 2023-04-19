@@ -8,6 +8,7 @@
 import SwiftUI
 
 @available(iOS 16.0, *)
+// Uses the UIView Representable to wrap SwiftUI to use UIKit functionality
 struct CalendarView: UIViewRepresentable {
     let interval: DateInterval
     @ObservedObject var eventStore: EventStore
@@ -42,9 +43,12 @@ struct CalendarView: UIViewRepresentable {
         }
     }
     
+    // Handles all the events, list of events, notifications, and updates
     @available(iOS 16.0, *)
     class Coordinator: NSObject, UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
         var parent: CalendarView
+        
+        // The parent is the CalendarView
         @ObservedObject var eventStore: EventStore
         init(parent: CalendarView, eventStore: ObservedObject<EventStore>) {
             self.parent = parent
@@ -52,7 +56,7 @@ struct CalendarView: UIViewRepresentable {
         }
         
         @MainActor
-        // Looks at all of the events
+        // Looks at the events listed
         func calendarView(_ calendarView: UICalendarView,
                           decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
             let foundEvents = eventStore.events
@@ -72,7 +76,7 @@ struct CalendarView: UIViewRepresentable {
             }
         }
         
-        // If found events, it will toogle the event
+        // Toggles the events if it is found
         func dateSelection(_ selection: UICalendarSelectionSingleDate,
                            didSelectDate dateComponents: DateComponents?) {
             parent.dateSelected = dateComponents
@@ -84,6 +88,7 @@ struct CalendarView: UIViewRepresentable {
             }
         }
         
+        // Allows date selection of each event
         func dateSelection(_ selection: UICalendarSelectionSingleDate,
                            canSelectDate dateComponents: DateComponents?) -> Bool {
             return true

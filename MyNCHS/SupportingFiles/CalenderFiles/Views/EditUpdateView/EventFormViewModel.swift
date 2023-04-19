@@ -8,6 +8,7 @@
 import SwiftUI
 
 // Each event has this
+// Has a date, note, and type
 class EventFormViewModel: ObservableObject {
     @Published var date = Date()
     @Published var note = ""

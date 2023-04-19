@@ -23,7 +23,7 @@ struct LinkInfoTab: View {
             showWebView.toggle()
         } label: {
             VStack {
-                Text(text1)
+                Text(LocalizedStringKey(text1))
                     .foregroundColor(color2)
                     .font(Font.custom("Quicksand-Regular", size: 20))
                     .padding()

@@ -37,14 +37,14 @@ struct LinkSuggestions: View {
                         Spacer()
                         
                         VStack {
-                            Text(text1)
+                            Text(LocalizedStringKey(text1))
                                 .font(Font.custom("Quicksand-Bold", size: 15))
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.leading)
                                 .offset(x: padding1)
                                 .padding(.bottom, 3)
                             
-                            Text(text2)
+                            Text(LocalizedStringKey(text2))
                                 .font(Font.custom("Quicksand-Medium", size: 10))
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity, alignment: .leading)

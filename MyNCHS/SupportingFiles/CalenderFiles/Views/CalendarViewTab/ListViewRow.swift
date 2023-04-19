@@ -27,6 +27,7 @@ struct ListViewRow: View {
             }
             Spacer()
             
+            // Puts the edit button onto the screen for each event
             Button {
                 formType = .update(event)
             } label: {
@@ -37,9 +38,9 @@ struct ListViewRow: View {
     }
 }
 
- struct ListViewRow_Previews: PreviewProvider {
-     static let event = Event(eventType: .social, date: Date(), note: "Let's party")
+struct ListViewRow_Previews: PreviewProvider {
+    static let event = Event(eventType: .social, date: Date(), note: "Let's party")
     static var previews: some View {
         ListViewRow(event: event, formType: .constant(.new))
     }
- }
+}

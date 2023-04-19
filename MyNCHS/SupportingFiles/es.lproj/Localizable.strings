@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  MyNCHS
+
+  Created by SaiLalith Kanumuri on 4/15/23.
+  
+*/
+
+"MyNCHS" = "MyNCHS";
+"Together we rise" = "Juntos/Juntas nos levantamos";
+"SIGN IN WITH GOOGLE" = "INICIA SESIÓN CON GOOGLE";
+"Home" = "Hogar";
+"Welcome to the Jungle, %@" = "Bienvenido/a a la selva, %@";
+"SUNNY" = "día soleado";
+"Semester 2" = "Semestre 2";
+"Explore" = "Explorar";
+"Newsletters" = "Boletines";
+"Events" = "Eventos";
+"Sports" = "Deportes";
+"Clubs" = "Clubs";
+"Suggestions" = "Sugerencias";
+"Make Online Payments" = "Hacer pagos en línea";
+"Pay on Touchbase →" = "Pagar en Touchbase →";
+"Grades and Attendance" = "Calificaciones y Asistencia";
+"Go to StudentVUE →" = "Ir a StudentVUE →";
+"Virtual Calming Room" = "Sala de calma virtual";
+"Learn More →" = "Aprende más →";
+"College Readiness" = "Preparación para la universidad";
+"Click Here →" = "Haga clic aquí →";
+
+"News" = "Noticias";
+"Your Newsletters, %@" = "Tus boletines, %@";
+"ParentSquare Bulletin #30" = "Boletín #30 de ParentSquare";
+"Track & Field\nTournament\nDates" = "Fechas del\nTorneo\nde Atletismo";
+"ParentSquare Bulletin #29" = "Boletín #29 de ParentSquare";
+"Follow Us" = "Síganos";
+"Instagram" = "Instagram";
+"Twitter" = "Twitter";
+"Facebook" = "Facebook";
+"Youtube" = "Youtube";
+"April" = "Abril";
+"Monthly\nNewsletter" = "Boletín/nmensual";
+
+"Calendar" = "Calendario";
+"Your Calendar, %@" = "Tu Calendario, %@";
+
+"Info" = "Información";
+"SIGN OUT" = "DESCONECTAR";
+"Notification Permissions" = "Permisos de notificación";
+"Closures & Delays" = "Cierres y Retrasos";
+"Enrollment" = "Inscripción";
+"Schedule" = "Cronograma";
+"Safety & Security" = "Seguridad Seguridad";
+"Feedback or Report Bugs Here!" = "¡Comenta o informa errores aquí!";
+"Version" = "Versión";

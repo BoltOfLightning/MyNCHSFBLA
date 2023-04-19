@@ -36,14 +36,14 @@ struct LinkNews: View {
                         Spacer()
                         
                         VStack {
-                            Text(text2)
+                            Text(LocalizedStringKey(text2))
                                 .font(Font.custom("Quicksand-Bold", size: 15))
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.leading)
                                 .offset(x: padding)
                                 .padding(.bottom, 3)
                             
-                            Text(text3)
+                            Text(LocalizedStringKey(text3))
                                 .font(Font.custom("Quicksand-Medium", size: 10))
                                 .foregroundColor(.black)
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -56,7 +56,7 @@ struct LinkNews: View {
                     .background(.gray.opacity(0.1))
                     .cornerRadius(10)
                     
-                    Text(text4)
+                    Text(LocalizedStringKey(text4))
                         .font(Font.custom("Quicksand-Regular", size: 10))
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.black)

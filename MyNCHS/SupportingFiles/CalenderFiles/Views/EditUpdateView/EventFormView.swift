@@ -20,12 +20,15 @@ struct EventFormView: View {
         if #available(iOS 16.0, *) {
             NavigationStack {
                 VStack {
+                    // This is the date picker
                     Form {
                         DatePicker(selection: $viewModel.date) {
                             Text("Date and Time")
                         }
+                        // Note
                         TextField("Note", text: $viewModel.note, axis: .vertical)
                             .focused($focus, equals: true)
+                        // Event type
                         Picker("Event Type", selection: $viewModel.eventType) {
                             ForEach(Event.EventType.allCases) {eventType in
                                 Text(eventType.icon + " " + eventType.rawValue.capitalized)
@@ -36,6 +39,7 @@ struct EventFormView: View {
                                     HStack {
                             Spacer()
                             Button {
+                                // To update the event
                                 if viewModel.updating {
                                     // update this event
                                     let event = Event(id: viewModel.id!,
@@ -49,7 +53,7 @@ struct EventFormView: View {
                                                             title: viewModel.note,
                                                             body: viewModel.eventType.rawValue.capitalizingFirstLetter())
                                 } else {
-                                    // create new event
+                                    // To create new event
                                     let newEvent = Event(eventType: viewModel.eventType,
                                                          date: viewModel.date,
                                                          note: viewModel.note)
@@ -64,6 +68,7 @@ struct EventFormView: View {
                             } label: {
                                 Text(viewModel.updating ? "Update Event" : "Add Event")
                             }
+                            // To create the button
                             .buttonStyle(.borderedProminent)
                             .disabled(viewModel.incomplete)
                             Spacer()
