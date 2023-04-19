@@ -119,6 +119,8 @@ We used many different sources to code and learn. Thanks to the individuals or g
 
 We thank our FBLA advisor, Mr.Barnes, for being well versed and supportive to all of us.
 
+We thank Mr. Stride, our computer science teacher, for giving us valuable feeback on our app and presentation.
+
 We thank Dhanush Eashwar, for giving us helpful advice and feedback along the way.
 
 We used previous FBLA NLC Finalist Presentations to make ours better. We thank them for providing these for public use.
