@@ -40,37 +40,43 @@ TO VIEW ON iOS
 ## Pages
 These are all of the big pages in the app, and information about them.
 ### Login
-![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/login%20page%20code%20explanation.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/Screenshot%202023-06-10%20at%2012.21.38%20PM.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/2login.png)
 We aimed for a clean design throughout our app and wanted to reflect that on our login page, which is the first thing the user will see. We used a color scheme that matched our school and integrated Google Sign In SSO, which uses the Firebase platform.
 
 Simply put, when the user attempts to log in to our app using Google Sign In SSO, their information will go to Firebase, a database made by Google. It verifies their info with an authentication view model which will allow them into our app. After the login, the compiler will go into ContentView, which states whether the login was successful.
 
 ### Home
-![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/homepage%20code%20explanation.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/Screenshot%202023-06-10%20at%2012.22.04%20PM.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/2home.png)
 The user is then taken to the homepage. At the bottom is the Menu Bar, which the user can use to navigate between the home, news, calendar, mailing, and info. The homepage has many suggestions for places to go. It uses Webview to show external content inside the app, making the homepage versatile and expandable.
 
 Behind the scenes, when the user logs in with Firebase, the homepage runs and goes to the explore subpage, with classes and objects like WebView, which goes to the NSD site and suggestion-link, which shows the entire display onto the screen.
 
 ### News
-![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newspage%20code%20explanation.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/Screenshot%202023-06-10%20at%2012.22.35%20PM.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/2news.png)
 One of the areas the user can go to from here is the news page. This page shows all of the recent news regarding North Creek. It is also organized in sections by topic. It has very user-friendly navigation, so you can find what you want easily.
 
 With Firebase and Google SSO, the app can fetch the users information to display. The news subpages explore shows all of the newsletters, and it uses Webview, and a link news class to fetch articles from NSD’s site. Also social media links are fetched here using Webview and the Logos subpage.
 
 ### Calendar
-![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/calendar%20image%20code%20explanation.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/Screenshot%202023-06-10%20at%2012.30.41%20PM.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/2calendar.png)
 The calendar allows users to keep track of school events and activities. It’s simple to use and is integrated conveniently. Notifications for the events exist to remind you about anything. Users will see default calendar events, but they can specifically add items for themselves if they want to, as well as edit or delete items. Many files are used to implement and keep the calendar working.
 
 The calendar has many files working together to make it work. The events calendar view prints the whole calendar onto the screen with the calendar view. In the calendar view we also have a coordinator file to handle all changes to more subfiles like each event, list of events, and updates to them as well. Events the user makes will also send notifications to the user.
 
 ### Information
-![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/info%20page%20code%20explanation.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/Screenshot%202023-06-10%20at%2012.33.17%20PM.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/2info.png)
 Lastly, we have our info page. This page gives the user information on external resources. It allows users to access essential sites quickly, as many things are integrated into the app. It’s also optimized for convenience by categorizing everything neatly. Users can sign out of their page and see their Google profile.
 
 The Information page has simple code: using the link info tab, and WebView, we can link external sites such as the “enrollment” site. The logos subpage displays the social media on the phones screen using the link button class and Webview.
 
 ### Mailing
-![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/mailing%20code%20explanation.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/Screenshot%202023-06-10%20at%2012.32.55%20PM.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/newassets/2mail.png)
 We also have incorporated a mailing system for our app so that the user can ask their questions to the staff of NCHS right in the app for convenience. With this feature, users can send images, excuse absences, and ask questions all in the app.
 
 The mailing system uses WebView 2 and a Webview model class to bring up an Apple mail page, where users can continue their action.
