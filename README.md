@@ -1,5 +1,5 @@
 # MyNCHS 2.5
-![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/MyNCHS%20cover%20logo.png)
+![Image](https://github.com/BoltOfLightning/MyNCHSFBLA/blob/main/README_assets/Screenshot%202023-06-10%20at%2011.50.44%20AM.png)
 
 An FBLA Mobile Application Development Project
 By Sai Lalith Kanumuri, Bryan Nie, and Rithin Karthik
@@ -9,6 +9,14 @@ MyNCHS is an app for the North Creek High School Community. It holds many differ
 
 ## Issue
 We are from North Creek High School and are founders of MyNCHS, an app geared towards the North Creek community to stay informed and organized. We know how time-consuming it is for parents to find information about their school. That’s why we developed MyNCHS, the new way for parents to stay informed about North Creek High School fast and seamlessly.
+
+## Testimonials
+Our app has been praised by many for its simple and efficient way to share school related info to parents, in a way that isnt finicky for all. Here are some reviews.
+#### "This app has made my life so much easier, genuinely. I've been very mixed with the platforms the school uses, and how disconnected it all is. However, with MyNCHS, I've been able to save so much time by having it in one place." - Karthik J
+
+#### "This app is a time-saver and a lifesaver! It's incredibly efficient at keeping all my important information and tasks in one place. I no longer have to waste time searching through different apps or platforms. Whether it's managing my calender, tracking my childs grades and more, this app does it all. It's a must-have for anyone who hates wasting their time!" - Prefers to Stay Anonymous
+
+#### "While this app is geared for parents, I also found it quite useful as a student. I can set my reminders on calenders, check my grades, catch up on sports, and do many more with this app. I'm super grateful that this exists in my life." - Ryan P
 
 
 ## Installation
