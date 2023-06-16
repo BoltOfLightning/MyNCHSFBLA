@@ -18,6 +18,8 @@ Our app has been praised by many for its simple and efficient way to share schoo
 
 #### "While this app is geared for parents, I also found it quite useful as a student. I can set my reminders on calenders, check my grades, catch up on sports, and do many more with this app. I'm super grateful that this exists in my life." - Ryan P
 
+#### "I speedran my school day using this with maximum efficiency. Wonderful tool, a lifesaver" - Vamshi P
+
 
 ## Installation
 ```
